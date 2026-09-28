@@ -1,5 +1,7 @@
 .cache/
+.venv/
 __pycache__/
+out/stills/
 out/preview/
 video/frames/
 *.tmp

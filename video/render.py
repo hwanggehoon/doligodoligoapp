@@ -17,7 +17,10 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
-CHROME = os.environ.get("CHROME_PATH", "/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+# Chromium: $CHROME_PATH if set, else the cloud image's preinstalled build, else Playwright's own
+# (run `python -m playwright install chromium` once on a local machine).
+_CLOUD_CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+CHROME = os.environ.get("CHROME_PATH") or (_CLOUD_CHROME if os.path.exists(_CLOUD_CHROME) else None)
 OUT_NAME = "C&C_프리미엄프라이빗커플스파_홍보영상.mp4"
 
 

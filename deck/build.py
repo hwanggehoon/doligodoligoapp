@@ -20,7 +20,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DECK = ROOT / "deck"
 IMAGES = ROOT / "assets" / "images"
 OUT = ROOT / "out"
-CHROME = os.environ.get("CHROME_PATH", "/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+# Chromium: $CHROME_PATH if set, else the cloud image's preinstalled build, else Playwright's own
+# (run `python -m playwright install chromium` once on a local machine).
+_CLOUD_CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+CHROME = os.environ.get("CHROME_PATH") or (_CLOUD_CHROME if os.path.exists(_CLOUD_CHROME) else None)
 PDF_NAME = "C&C_프리미엄프라이빗커플스파_사업계획서_가로형.pdf"
 
 
@@ -57,13 +60,15 @@ def main():
 
     photos = write_photo_map()
     print(f"photos found: {len(photos)} -> {', '.join(sorted(photos)) or '(none)'}")
+    if args.no_pdf and args.no_png:  # only refresh deck/photos.js (used by video/render.py)
+        return
     OUT.mkdir(exist_ok=True)
     prev = OUT / "preview"
     prev.mkdir(exist_ok=True)
 
     url = (DECK / "index.html").as_uri() + ("" if args.draft else "?tags=0")
     with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path=CHROME, args=["--allow-file-access-from-files"])
+        browser = p.chromium.launch(executable_path=CHROME, args=["--allow-file-access-from-files"])  # CHROME=None -> Playwright's bundled Chromium
         page = browser.new_page(viewport={"width": 1920, "height": 1080}, device_scale_factor=args.scale)
         page.goto(url)
         page.wait_for_selector("body[data-ready='1']", timeout=60000)

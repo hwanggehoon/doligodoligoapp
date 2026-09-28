@@ -27,18 +27,44 @@ assets/
 tools/           atmos.py · fonts.py · place_photos.py
 ```
 
-## 다시 만들기
+## 내 컴퓨터에서 다시 만들기
+
+**macOS** (터미널, [Homebrew](https://brew.sh) 필요)
 
 ```bash
-pip install playwright numpy scipy pillow fonttools brotli pymupdf
-sudo apt-get install -y ffmpeg          # 영상 인코딩
-python3 deck/build.py                   # PDF + out/preview/*.png
-python3 video/music.py                  # 배경음악 (video/music.wav)
-python3 video/render.py                 # 홍보영상 MP4 (약 5~6분)
+brew install python@3.12 ffmpeg git
+git clone https://github.com/hwanggehoon/doligodoligoapp.git
+cd doligodoligoapp
+git checkout claude/business-plan-visuals-video-wmh8b8
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python -m playwright install chromium   # 렌더링용 브라우저 (최초 1회)
+
+python deck/build.py      # PDF + out/preview/*.png
+python video/music.py     # 배경음악 (video/music.wav)
+python video/render.py    # 홍보영상 MP4 (약 5분)
 ```
 
-Chromium 경로는 `CHROME_PATH` 환경변수로 바꿀 수 있습니다.
-텍스트를 고친 뒤 드문 한글 글자가 빠져 보이면 `python3 tools/fonts.py`로 폰트 서브셋을 다시 만듭니다.
+**Windows** (PowerShell)
+
+```powershell
+winget install Python.Python.3.12 Gyan.FFmpeg Git.Git   # 설치 후 PowerShell 새로 열기
+git clone https://github.com/hwanggehoon/doligodoligoapp.git
+cd doligodoligoapp
+git checkout claude/business-plan-visuals-video-wmh8b8
+py -m venv .venv; .venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python -m playwright install chromium
+
+python deck\build.py
+python video\music.py
+python video\render.py
+```
+
+- 비공개 저장소라면 `git clone` 때 GitHub 로그인이 필요합니다.
+- 다른 Chromium을 쓰려면 `CHROME_PATH` 환경변수로 경로를 지정합니다.
+- 텍스트를 고친 뒤 드문 한글 글자가 빠져 보이면 `python tools/fonts.py`로 폰트 서브셋을 다시 만듭니다
+  (Node.js의 `npm` 필요).
 
 ## 사진 넣기
 
