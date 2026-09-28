@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Premium Private Couple Spa — design system (shared by deck and video)
+   Canvas: 1920 x 1080 px per slide / frame.
+   ========================================================================== */
+
+@import url("../assets/fonts/fonts.css");
+
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-Light.ttf"); font-weight: 300; font-style: normal; font-display: block; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-Regular.ttf"); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-Medium.ttf"); font-weight: 500; font-style: normal; font-display: block; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-SemiBold.ttf"); font-weight: 600; font-style: normal; font-display: block; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-LightItalic.ttf"); font-weight: 300; font-style: italic; font-display: block; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-Italic.ttf"); font-weight: 400; font-style: italic; font-display: block; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/CormorantGaramond-MediumItalic.ttf"); font-weight: 500; font-style: italic; font-display: block; }
+
+:root {
+  /* surfaces */
+  --ink: #14202B;          /* night sea navy */
+  --ink-2: #1B2A37;
+  --ink-3: #26384A;
+  --paper: #F7F3EC;        /* warm paper */
+  --paper-2: #EFE8DC;
+  --card: #FFFDF9;
+  --sand: #E6DCCB;
+  --stone: #CFC6B8;
+  --hair: #E2DACD;         /* hairline on paper */
+  --hair-dark: rgba(244, 239, 231, 0.16);
+
+  /* brand accents */
+  --brass: #AA7D2D;        /* chart slot 2 (light) */
+  --brass-d: #86611F;      /* brass for small text on paper (>= 4.5:1) */
+  --brass-l: #C9A66B;      /* brass on dark */
+  --brass-xl: #E8D6B0;
+  --sea: #1B709E;          /* chart slot 1 (light) */
+  --sea-l: #3E92C4;        /* chart slot 1 (dark) */
+  --sea-xl: #D6E6F0;
+  --context: #CFC6B8;      /* de-emphasis marks on paper */
+
+  /* text */
+  --t1: #17212B;
+  --t2: #4C5258;
+  --t3: #85817A;
+  --d1: #F4EFE7;
+  --d2: #C3C9CE;
+  --d3: #8A96A1;
+
+  /* type */
+  --serif: "Noto Serif KR", "Noto Serif CJK KR", "Nanum Myeongjo", serif;
+  --sans: "Pretendard", "Noto Sans CJK KR", "Apple SD Gothic Neo", sans-serif;
+  --latin: "Cormorant", "Cormorant Garamond", "Noto Serif KR", Georgia, serif;
+
+  --pad-x: 120px;
+  --pad-top: 96px;
+  --pad-bottom: 84px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #0B1118;
+  font-family: var(--sans);
+  color: var(--t1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  
+}
+
+body { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+
+/* ------------------------------------------------------------------ slide */
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: var(--paper);
+  page-break-after: always;
+  break-after: page;
+}
+.slide.dark { background: var(--ink); color: var(--d1); }
+
+@page { size: 1920px 1080px; margin: 0; }
+@media screen {
+  body { padding: 40px 0; }
+  .slide { margin: 0 auto 40px; box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+}
+@media print {
+  body { background: none; }
+}
+
+.paper-tex { position: absolute; inset: 0; background: url("../assets/atmos/paper.jpg") center/cover; opacity: .9; }
+
+/* frame content area */
+.inner {
+  position: absolute;
+  inset: var(--pad-top) var(--pad-x) var(--pad-bottom) var(--pad-x);
+}
+
+/* ---------------------------------------------------------------- header */
+.kicker {
+  display: flex; align-items: baseline; gap: 18px;
+  font-family: var(--sans); font-weight: 600; font-size: 17px;
+  letter-spacing: .28em; text-transform: uppercase; color: var(--brass-d);
+}
+.dark .kicker { color: var(--brass-l); }
+.kicker .no {
+  font-family: var(--latin); font-style: italic; font-weight: 500;
+  font-size: 34px; letter-spacing: 0; text-transform: none;
+}
+.kicker .rule { flex: 0 0 56px; height: 1px; background: currentColor; opacity: .6; transform: translateY(-6px); }
+
+h1, h2, h3 { font-weight: 500; }
+.title {
+  font-family: var(--serif); font-weight: 500; font-size: 60px; line-height: 1.22;
+  letter-spacing: -.02em; color: var(--t1); margin-top: 22px; text-wrap: balance;
+}
+.dark .title { color: var(--d1); }
+.lead {
+  font-size: 27px; line-height: 1.6; color: var(--t2); margin-top: 18px; font-weight: 400;
+  text-wrap: pretty;
+}
+.dark .lead { color: var(--d2); }
+
+.en {
+  font-family: var(--latin); font-style: italic; font-weight: 400; letter-spacing: 0;
+}
+
+/* ---------------------------------------------------------------- footer */
+.ft {
+  position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 34px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--t3);
+}
+.dark .ft { color: rgba(244,239,231,.55); }
+.ft .pg { font-family: var(--latin); font-style: italic; font-size: 22px; letter-spacing: 0; text-transform: none; }
+
+/* ---------------------------------------------------------------- photo slot */
+.ph {
+  position: absolute; overflow: hidden; background: var(--ink-2);
+}
+.ph > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph .slot-tag {
+  position: absolute; left: 22px; bottom: 20px; z-index: 5;
+  display: none; align-items: center; gap: 10px;
+  padding: 9px 14px 9px 12px; border-radius: 3px;
+  background: rgba(10,16,24,.62); color: #F4EFE7; backdrop-filter: blur(6px);
+  font-size: 15px; letter-spacing: .02em; line-height: 1.3; max-width: 78%;
+}
+.ph .slot-tag b { font-weight: 700; letter-spacing: .16em; font-size: 12px; color: var(--brass-l); }
+.show-slot-tags .ph.is-fallback .slot-tag { display: inline-flex; }
+.ph.tag-top .slot-tag { top: 20px; bottom: auto; }
+.ph.tag-right .slot-tag { left: auto; right: 22px; }
+
+/* gradient scrims for text over photos */
+.scrim-left { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,17,24,.94) 0%, rgba(11,17,24,.80) 32%, rgba(11,17,24,.35) 58%, rgba(11,17,24,0) 78%); }
+.scrim-bottom { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11,17,24,.92) 0%, rgba(11,17,24,.55) 38%, rgba(11,17,24,0) 70%); }
+.scrim-right { position: absolute; inset: 0; background: linear-gradient(270deg, rgba(11,17,24,.94) 0%, rgba(11,17,24,.78) 34%, rgba(11,17,24,.25) 60%, rgba(11,17,24,0) 78%); }
+.scrim-all { position: absolute; inset: 0; background: rgba(11,17,24,.55); }
+
+/* ---------------------------------------------------------------- common bits */
+.hair { height: 1px; background: var(--hair); }
+.dark .hair { background: var(--hair-dark); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px; font-size: 18px; font-weight: 500;
+  border: 1px solid var(--stone); color: var(--t2); background: rgba(255,255,255,.5);
+}
+.dark .chip { border-color: rgba(244,239,231,.28); color: var(--d1); background: rgba(255,255,255,.06); }
+.chip.brass { border-color: rgba(170,125,45,.55); color: var(--brass-d); background: rgba(232,214,176,.35); }
+.chip.sea { border-color: rgba(27,112,158,.45); color: #125378; background: rgba(214,230,240,.6); }
+
+.card {
+  background: var(--card); border: 1px solid var(--hair); border-radius: 6px;
+}
+
+.num { font-family: var(--sans); font-weight: 600; letter-spacing: -.02em; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+.note { font-size: 17px; line-height: 1.55; color: var(--t3); }
+.dark .note { color: rgba(244,239,231,.6); }
+
+/* stat tile */
+.stat .v { font-family: var(--sans); font-weight: 600; font-size: 58px; letter-spacing: -.025em; line-height: 1.05; color: var(--t1); }
+.stat .v small { font-size: .5em; font-weight: 500; letter-spacing: 0; margin-left: 4px; color: var(--t2); }
+.stat .l { font-size: 20px; line-height: 1.5; color: var(--t2); margin-top: 12px; }
+.dark .stat .v { color: var(--d1); }
+.dark .stat .v small { color: var(--d2); }
+.dark .stat .l { color: var(--d2); }
+
+/* chart text */
+.viz text { font-family: var(--sans); }
+.viz .tick { font-size: 16px; fill: var(--t3); font-variant-numeric: tabular-nums; }
+.viz .lbl { font-size: 20px; fill: var(--t1); font-weight: 500; }
+.viz .sub { font-size: 16px; fill: var(--t3); }
+.viz .val { font-size: 19px; fill: var(--t1); font-weight: 600; font-variant-numeric: tabular-nums; }
+.viz .val-m { font-size: 17px; fill: var(--t2); font-weight: 500; font-variant-numeric: tabular-nums; }
+.dark .viz .tick, .dark .viz .sub { fill: var(--d3); }
+.dark .viz .lbl, .dark .viz .val { fill: var(--d1); }
+.dark .viz .val-m { fill: var(--d2); }
+
+.legend { display: flex; gap: 28px; font-size: 18px; color: var(--t2); align-items: center; }
+.legend i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; margin-right: 9px; vertical-align: -1px; }
+.dark .legend { color: var(--d2); }
+
+/* icon */
+.ico { width: 44px; height: 44px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }

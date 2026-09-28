@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920">
+<title>프리미엄 프라이빗 커플 스파 사업계획서 — ㈜C&amp;C</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---------- cover */
+#s-cover .brand { position: absolute; top: 0; left: 0; display: flex; align-items: baseline; gap: 18px; font-family: var(--sans); font-weight: 700; font-size: 26px; letter-spacing: .04em; }
+#s-cover .brand span { font-weight: 500; font-size: 14px; letter-spacing: .32em; color: var(--brass-l); }
+#s-cover .cover-main { position: absolute; left: 0; top: 250px; width: 980px; }
+#s-cover h1 { font-family: var(--serif); font-weight: 400; font-size: 118px; line-height: 1.12; letter-spacing: -.035em; margin-top: 34px; color: #F7F2EA; }
+#s-cover .en-sub { font-size: 50px; color: var(--brass-l); margin-top: 26px; font-weight: 400; }
+#s-cover .cover-lead { font-size: 28px; line-height: 1.6; color: var(--d2); margin-top: 30px; }
+#s-cover .cover-meta { position: absolute; left: 0; bottom: 0; display: flex; gap: 70px; }
+#s-cover .cover-meta div { padding-left: 20px; border-left: 1px solid rgba(201,166,107,.6); }
+#s-cover .cover-meta b { display: block; font-size: 22px; font-weight: 600; color: var(--d1); }
+#s-cover .cover-meta span { display: block; font-size: 18px; color: var(--d3); margin-top: 6px; }
+
+/* ---------- glance */
+#s-glance .left { position: absolute; left: 0; top: 250px; width: 560px; }
+#s-glance .statement { font-family: var(--serif); font-size: 50px; line-height: 1.38; letter-spacing: -.03em; color: var(--t1); font-weight: 500; }
+#s-glance .statement em { font-style: normal; color: var(--brass-d); }
+#s-glance .desc { font-size: 23px; line-height: 1.7; color: var(--t2); margin-top: 34px; }
+#s-glance .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+#s-glance .grid { position: absolute; right: 0; top: 190px; width: 1040px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+#s-glance .stat { padding: 30px 30px 32px; min-height: 318px; position: relative; }
+#s-glance .stat .ico { width: 40px; height: 40px; color: var(--brass); margin-bottom: 36px; }
+#s-glance .stat .cap { font-size: 16px; font-weight: 600; letter-spacing: .18em; color: var(--t3); text-transform: uppercase; margin-bottom: 12px; }
+
+/* ---------- overview */
+#s-overview .ph { left: 0; top: 0; width: 780px; height: 1080px; }
+#s-overview .panel { position: absolute; left: 880px; right: 120px; top: 96px; bottom: 84px; }
+#s-overview dl { margin-top: 40px; display: grid; grid-template-columns: 210px 1fr; }
+#s-overview dt, #s-overview dd { padding: 17px 0; border-top: 1px solid var(--hair); font-size: 23px; line-height: 1.45; }
+#s-overview dt { color: var(--t3); font-weight: 500; font-size: 20px; padding-top: 19px; }
+#s-overview dd { color: var(--t1); font-weight: 500; }
+#s-overview dd b { color: var(--brass-d); font-weight: 700; }
+
+/* ---------- positioning */
+#s-position .cmp { position: absolute; left: 0; right: 0; top: 300px; display: grid; grid-template-columns: 200px 1fr 1fr 1.32fr; column-gap: 0; }
+#s-position .cmp > div { padding: 20px 30px; font-size: 22px; line-height: 1.5; color: var(--t2); border-top: 1px solid var(--hair); min-height: 86px; display: flex; align-items: center; }
+#s-position .cmp > div > span { display: block; }
+#s-position .cmp .rh { color: var(--t3); font-size: 19px; font-weight: 600; letter-spacing: .06em; padding-left: 0; }
+#s-position .cmp .ch { border-top: none; font-family: var(--serif); font-size: 28px; color: var(--t1); font-weight: 500; min-height: 80px; align-items: flex-end; padding-bottom: 18px; }
+#s-position .cmp .us { background: var(--ink); color: var(--d1); border-top-color: rgba(244,239,231,.14); font-weight: 500; }
+#s-position .cmp .us.ch { color: #fff; border-radius: 8px 8px 0 0; }
+#s-position .cmp .us.last { border-radius: 0 0 8px 8px; }
+#s-position .cmp .us b { color: var(--brass-l); font-weight: 600; }
+#s-position .cmp .ch small { display: block; font-family: var(--latin); font-style: italic; font-size: 22px; color: var(--t3); margin-bottom: 4px; }
+#s-position .cmp .us.ch small { color: var(--brass-l); }
+
+/* ---------- locations */
+#s-loc .cards { position: absolute; left: 0; right: 0; top: 318px; bottom: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
+#s-loc .lc { position: relative; overflow: hidden; border-radius: 6px; }
+#s-loc .lc .ph { inset: 0; }
+#s-loc .lc .scrim-bottom { background: linear-gradient(0deg, rgba(11,17,24,.95) 0%, rgba(11,17,24,.78) 36%, rgba(11,17,24,.1) 64%, rgba(11,17,24,0) 100%); }
+#s-loc .lc .txt { position: absolute; left: 34px; right: 34px; bottom: 32px; }
+#s-loc .lc .en { font-size: 58px; color: var(--brass-l); line-height: 1; }
+#s-loc .lc h3 { font-family: var(--serif); font-size: 36px; font-weight: 500; margin-top: 10px; display: flex; align-items: baseline; gap: 14px; }
+#s-loc .lc h3 span { font-family: var(--sans); font-size: 15px; letter-spacing: .26em; color: var(--d2); font-weight: 600; text-transform: uppercase; }
+#s-loc .lc ul { list-style: none; margin-top: 18px; }
+#s-loc .lc li { font-size: 20px; line-height: 1.55; color: var(--d2); padding-left: 18px; position: relative; }
+#s-loc .lc li::before { content: ""; position: absolute; left: 0; top: 13px; width: 6px; height: 1px; background: var(--brass-l); }
+#s-loc .lc .rec { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(244,239,231,.18); font-size: 19px; color: var(--d1); }
+#s-loc .lc .rec b { color: var(--brass-l); font-weight: 600; margin-right: 8px; }
+#s-loc .ph .slot-tag { top: 20px; bottom: auto; }
+
+/* ---------- floors */
+#s-floors .stack { position: absolute; left: 0; right: 0; top: 300px; display: flex; flex-direction: column; gap: 14px; }
+#s-floors .fl { display: grid; grid-template-columns: 150px 1fr 380px; align-items: stretch; min-height: 138px; }
+#s-floors .fl .no { font-family: var(--latin); font-size: 76px; font-weight: 400; color: var(--t1); line-height: 1; display: flex; align-items: center; }
+#s-floors .fl .blk { background: var(--card); border: 1px solid var(--hair); border-left: 5px solid var(--stone); border-radius: 4px; padding: 22px 30px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+#s-floors .fl.core .blk { border-left-color: var(--sea); }
+#s-floors .fl.up .blk { border-left-color: var(--brass); }
+#s-floors .fl.mix .blk { border-left-color: var(--sea); box-shadow: inset 0 -5px 0 -0px rgba(170,125,45,0); }
+#s-floors .fl .blk h3 { font-family: var(--serif); font-size: 29px; font-weight: 500; color: var(--t1); }
+#s-floors .fl .items { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+#s-floors .fl .it { display: flex; align-items: center; gap: 9px; font-size: 20px; color: var(--t2); }
+#s-floors .fl .it .ico { width: 26px; height: 26px; color: var(--brass); stroke-width: 1.7; }
+#s-floors .fl .role { padding: 0 0 0 36px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+#s-floors .fl .role p { font-size: 21px; color: var(--t1); line-height: 1.45; font-weight: 500; }
+#s-floors .fl .role .chip { align-self: flex-start; font-size: 16px; padding: 5px 12px; }
+#s-floors .legend { position: absolute; right: 0; top: 214px; }
+
+/* ---------- 4F */
+#s-4f .ph.main { inset: 0; }
+#s-4f .content { position: absolute; left: 120px; top: 96px; width: 760px; }
+#s-4f .feat { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 30px; margin-top: 50px; }
+#s-4f .feat div { display: flex; gap: 16px; align-items: flex-start; }
+#s-4f .feat .ico { width: 42px; height: 42px; color: var(--brass-l); flex: none; }
+#s-4f .feat b { display: block; font-size: 25px; font-weight: 600; color: var(--d1); }
+#s-4f .feat span { display: block; font-size: 19px; color: var(--d2); margin-top: 4px; line-height: 1.45; }
+#s-4f .price { margin-top: 56px; display: flex; align-items: baseline; gap: 18px; }
+#s-4f .price .num { font-size: 60px; color: #fff; }
+#s-4f .price span { font-size: 22px; color: var(--d2); }
+#s-4f .insets { position: absolute; right: 120px; bottom: 96px; display: flex; gap: 24px; }
+#s-4f .inset { width: 380px; }
+#s-4f .inset .ph { position: relative; width: 380px; height: 250px; border-radius: 4px; }
+#s-4f .inset p { font-size: 18px; color: var(--d1); margin-top: 12px; }
+#s-4f .inset p span { color: var(--brass-l); font-family: var(--latin); font-style: italic; font-size: 22px; margin-right: 8px; }
+
+/* ---------- 5F */
+#s-5f .ph.main { left: 0; top: 0; width: 1100px; height: 1080px; }
+#s-5f .side { position: absolute; left: 1100px; right: 0; top: 0; bottom: 0; background: var(--ink); }
+#s-5f .content { position: absolute; left: 90px; right: 110px; top: 96px; }
+#s-5f .items { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+#s-5f .items div { display: flex; align-items: center; gap: 16px; font-size: 24px; color: var(--d1); font-weight: 500; }
+#s-5f .items .ico { width: 36px; height: 36px; color: var(--brass-l); }
+#s-5f .items small { color: var(--d3); font-size: 18px; margin-left: 4px; font-weight: 400; }
+#s-5f .sub { position: absolute; left: 90px; right: 110px; bottom: 96px; }
+#s-5f .sub .ph { position: relative; height: 270px; border-radius: 4px; }
+#s-5f .sub .row { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+
+/* ---------- 6F */
+#s-6f .ph.main { inset: 0; }
+#s-6f .content { position: absolute; right: 120px; top: 96px; width: 700px; }
+#s-6f .stat { margin-top: 60px; }
+#s-6f .stat .v { font-size: 66px; color: #fff; }
+#s-6f .chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+
+/* ---------- journey */
+#s-journey .steps { position: absolute; left: 0; right: 0; top: 290px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 34px; }
+#s-journey .st { position: relative; padding: 0; min-height: 590px; display: flex; flex-direction: column; }
+#s-journey .st .ph { position: relative; height: 200px; border-radius: 6px 6px 0 0; }
+#s-journey .st .ph .slot-tag { font-size: 12px; left: 10px; bottom: 10px; max-width: 92%; padding: 6px 9px; }
+#s-journey .st .stb { padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+#s-journey .st .n { font-family: var(--latin); font-style: italic; font-size: 30px; color: var(--brass-d); }
+#s-journey .st .ico { width: 40px; height: 40px; color: var(--brass); margin: 14px 0 16px; stroke-width: 1.5; }
+#s-journey .st h3 { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--t1); }
+#s-journey .st p { font-size: 20px; line-height: 1.6; color: var(--t2); margin-top: 12px; flex: 1; }
+#s-journey .st .chip { margin-top: 22px; align-self: flex-start; font-size: 17px; }
+#s-journey .st:not(:last-child)::after { content: ""; position: absolute; right: -30px; top: 330px; width: 26px; height: 1px; background: var(--brass); }
+#s-journey .st:not(:last-child)::before { content: ""; position: absolute; right: -31px; top: 326px; width: 7px; height: 7px; border-top: 1px solid var(--brass); border-right: 1px solid var(--brass); transform: rotate(45deg); }
+
+/* ---------- pricing */
+#s-pricing .chart { position: absolute; left: 0; top: 318px; }
+#s-pricing .legend { position: absolute; left: 330px; top: 258px; }
+#s-pricing .side { position: absolute; right: 0; top: 250px; width: 470px; }
+#s-pricing .side h4 { font-size: 17px; letter-spacing: .2em; color: var(--t3); font-weight: 600; margin-bottom: 8px; }
+#s-pricing .opt { padding: 18px 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; }
+#s-pricing .opt b { font-size: 22px; font-weight: 600; color: var(--t1); }
+#s-pricing .opt .p { font-size: 22px; font-weight: 600; color: var(--t1); text-align: right; font-variant-numeric: tabular-nums; }
+#s-pricing .opt span { font-size: 17px; color: var(--t3); grid-column: 1 / -1; }
+#s-pricing .mem { margin-top: 30px; padding: 26px 28px; background: var(--ink); color: var(--d1); border-radius: 6px; }
+#s-pricing .mem .k { font-size: 15px; letter-spacing: .22em; color: var(--brass-l); font-weight: 600; }
+#s-pricing .mem .v { font-size: 38px; font-weight: 600; margin-top: 10px; letter-spacing: -.02em; }
+#s-pricing .mem .v small { font-size: 20px; font-weight: 500; color: var(--d2); margin-left: 6px; }
+#s-pricing .mem p { font-size: 18px; color: var(--d2); margin-top: 10px; line-height: 1.5; }
+
+/* ---------- strategy (dark) */
+#s-strategy .stairs { position: absolute; left: 0; top: 330px; width: 820px; height: 560px; }
+#s-strategy .pts { position: absolute; right: 0; top: 250px; width: 780px; display: flex; flex-direction: column; gap: 0; }
+#s-strategy .pt { display: grid; grid-template-columns: 58px 1fr; padding: 20px 0; border-top: 1px solid var(--hair-dark); }
+#s-strategy .pt .n { font-family: var(--latin); font-style: italic; font-size: 34px; color: var(--brass-l); line-height: 1.1; }
+#s-strategy .pt b { font-size: 24px; color: var(--d1); font-weight: 600; }
+#s-strategy .pt p { font-size: 19px; line-height: 1.55; color: var(--d2); margin-top: 6px; }
+
+/* ---------- target */
+#s-target .cards { position: absolute; left: 0; right: 0; top: 290px; bottom: 20px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; }
+#s-target .tc { display: flex; flex-direction: column; overflow: hidden; }
+#s-target .tc .ph { position: relative; height: 270px; }
+#s-target .tc .body { padding: 26px 26px 24px; display: flex; flex-direction: column; flex: 1; }
+#s-target .tc h3 { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--t1); }
+#s-target .tc .k { font-size: 15px; letter-spacing: .2em; color: var(--t3); font-weight: 600; margin-top: 20px; }
+#s-target .tc .need { font-size: 21px; color: var(--t1); margin-top: 6px; line-height: 1.45; font-weight: 500; }
+#s-target .tc .prods { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+#s-target .tc .prods .chip { align-self: flex-start; font-size: 17px; padding: 6px 12px; }
+#s-target .ph .slot-tag { font-size: 13px; left: 12px; bottom: 12px; max-width: 90%; }
+
+/* ---------- operations */
+#s-ops .stats { position: absolute; left: 0; top: 300px; width: 620px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+#s-ops .stats .stat { padding: 28px 28px 30px; }
+#s-ops .stats .stat .v { font-size: 50px; }
+#s-ops .right { position: absolute; right: 0; top: 290px; width: 960px; }
+#s-ops .right h4 { font-size: 17px; letter-spacing: .2em; color: var(--t3); font-weight: 600; margin-bottom: 18px; }
+#s-ops .day { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+#s-ops .day div { height: 58px; border-radius: 4px; background: var(--sea-xl); border: 1px solid rgba(27,112,158,.3); display: flex; align-items: center; justify-content: center; font-size: 18px; color: #125378; font-weight: 600; font-variant-numeric: tabular-nums; }
+#s-ops .ticks { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 8px; font-size: 15px; color: var(--t3); font-variant-numeric: tabular-nums; }
+#s-ops .ticks span:last-child { display: flex; justify-content: space-between; }
+#s-ops .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+#s-ops .blk { margin-top: 44px; }
+
+/* ---------- revenue */
+#s-revenue .chart { position: absolute; left: 0; top: 330px; }
+#s-revenue .legend { position: absolute; left: 150px; top: 272px; }
+#s-revenue table { position: absolute; right: 0; top: 262px; width: 560px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+#s-revenue th, #s-revenue td { padding: 13px 10px; font-size: 20px; text-align: right; border-bottom: 1px solid var(--hair); }
+#s-revenue th { font-size: 16px; color: var(--t3); letter-spacing: .08em; font-weight: 600; }
+#s-revenue td:first-child, #s-revenue th:first-child { text-align: left; color: var(--t2); padding-left: 0; }
+#s-revenue td { color: var(--t1); }
+#s-revenue .base { background: rgba(214,230,240,.55); font-weight: 600; }
+#s-revenue tr.total td { border-top: 1.5px solid var(--t1); border-bottom: none; font-weight: 700; font-size: 21px; }
+#s-revenue tr.aux td { font-size: 17px; color: var(--t3); border-bottom: none; }
+#s-revenue .fn { position: absolute; left: 0; right: 0; bottom: 0; }
+
+/* ---------- base case */
+#s-base .rows { position: absolute; left: 0; top: 300px; width: 1000px; }
+#s-base .r { display: grid; grid-template-columns: 250px 1fr 200px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--hair); }
+#s-base .r b { font-size: 24px; font-weight: 600; color: var(--t1); }
+#s-base .r span { font-size: 21px; color: var(--t2); font-variant-numeric: tabular-nums; }
+#s-base .r .v { text-align: right; font-size: 26px; font-weight: 600; color: var(--t1); font-variant-numeric: tabular-nums; }
+#s-base .r.tot { border-top: 1.5px solid var(--t1); }
+#s-base .r.tot b, #s-base .r.tot .v { font-size: 30px; }
+#s-base .r.tot .v { color: var(--sea); }
+#s-base .right { position: absolute; right: 0; top: 290px; width: 560px; }
+#s-base .right h4 { font-size: 17px; letter-spacing: .2em; color: var(--t3); font-weight: 600; }
+
+/* ---------- capex */
+#s-capex .left { position: absolute; left: 0; top: 300px; width: 520px; }
+#s-capex .hero .v { font-size: 92px; font-weight: 600; letter-spacing: -.035em; color: var(--t1); line-height: 1; }
+#s-capex .hero .v small { font-size: 34px; margin-left: 6px; color: var(--t2); font-weight: 500; }
+#s-capex .hero .l { font-size: 21px; color: var(--t2); margin-top: 14px; }
+#s-capex .groups { margin-top: 44px; }
+#s-capex .g { display: grid; grid-template-columns: 1fr auto; padding: 12px 0; border-top: 1px solid var(--hair); font-size: 20px; color: var(--t2); }
+#s-capex .g b { color: var(--t1); font-weight: 600; font-variant-numeric: tabular-nums; }
+#s-capex .chart { position: absolute; right: 0; top: 262px; }
+
+/* ---------- opex */
+#s-opex .tbl { position: absolute; left: 0; top: 300px; width: 1000px; }
+#s-opex .row { display: grid; grid-template-columns: 190px 380px 110px 1fr; align-items: center; gap: 0 18px; padding: 15px 0; border-top: 1px solid var(--hair); }
+#s-opex .row b { font-size: 22px; font-weight: 600; color: var(--t1); }
+#s-opex .row .bar { height: 20px; position: relative; }
+#s-opex .row .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--sea); border-radius: 0 4px 4px 0; }
+#s-opex .row .v { font-size: 21px; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+#s-opex .row span { font-size: 17px; color: var(--t3); line-height: 1.45; }
+#s-opex .row.var .bar { color: var(--t3); font-size: 17px; }
+#s-opex .row.tot { border-top: 1.5px solid var(--t1); }
+#s-opex .bep { position: absolute; right: 0; top: 290px; width: 560px; }
+#s-opex .eq { padding: 24px 28px; border-radius: 6px; }
+#s-opex .eq .k { font-size: 17px; color: var(--t3); font-weight: 600; letter-spacing: .06em; }
+#s-opex .eq .v { font-size: 44px; font-weight: 600; letter-spacing: -.02em; margin-top: 6px; }
+#s-opex .eq .v small { font-size: 22px; color: var(--t2); font-weight: 500; margin-left: 4px; }
+#s-opex .op { text-align: center; font-size: 30px; color: var(--t3); line-height: 1; padding: 10px 0; font-weight: 300; }
+#s-opex .eq.res { background: var(--ink); color: var(--d1); }
+#s-opex .eq.res .k { color: var(--brass-l); }
+#s-opex .eq.res .v small { color: var(--d2); }
+
+/* ---------- marketing */
+#s-mkt .ph { left: 0; top: 0; width: 640px; height: 1080px; }
+#s-mkt .panel { position: absolute; left: 740px; right: 120px; top: 96px; bottom: 84px; }
+#s-mkt .grid { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+#s-mkt .mc { padding: 26px 28px; display: grid; grid-template-columns: 44px 1fr; gap: 6px 18px; }
+#s-mkt .mc .ico { width: 36px; height: 36px; color: var(--brass); grid-row: span 2; }
+#s-mkt .mc b { font-size: 23px; font-weight: 600; color: var(--t1); }
+#s-mkt .mc p { font-size: 18px; line-height: 1.55; color: var(--t2); }
+
+/* ---------- risk */
+#s-risk .grid { position: absolute; left: 0; right: 0; top: 300px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+#s-risk .rc { padding: 28px 28px 30px; min-height: 290px; }
+#s-risk .rc .ico { width: 40px; height: 40px; color: var(--brass); }
+#s-risk .rc h3 { font-family: var(--serif); font-size: 27px; font-weight: 500; margin-top: 20px; color: var(--t1); }
+#s-risk .rc p { font-size: 19px; line-height: 1.6; color: var(--t2); margin-top: 10px; }
+#s-risk .rc.note { background: var(--ink); color: var(--d1); border: none; }
+#s-risk .rc.note h3 { color: #fff; }
+#s-risk .rc.note p { color: var(--d2); }
+#s-risk .rc.note .ico { color: var(--brass-l); }
+
+/* ---------- schedule */
+#s-sched .line { position: absolute; left: 0; right: 0; top: 381px; height: 1px; background: var(--stone); }
+#s-sched .cols { position: absolute; left: 0; right: 0; top: 290px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 34px; }
+#s-sched .c .hd { position: relative; height: 120px; }
+#s-sched .c .pill { position: absolute; left: 0; top: 66px; display: inline-flex; align-items: center; height: 50px; padding: 0 22px; border-radius: 999px; background: var(--card); border: 1px solid var(--stone); font-size: 22px; font-weight: 600; color: var(--t1); z-index: 1; }
+#s-sched .c .ico { width: 40px; height: 40px; color: var(--brass); margin-top: 40px; }
+#s-sched .c.build .pill { background: var(--sea); color: #fff; border-color: var(--sea); }
+#s-sched .c .step { font-family: var(--latin); font-style: italic; font-size: 36px; color: var(--brass-d); line-height: 1; }
+#s-sched .c h3 { font-family: var(--serif); font-size: 32px; font-weight: 500; color: var(--t1); margin-top: 18px; line-height: 1.4; }
+#s-sched .c p { font-size: 21px; color: var(--t2); margin-top: 12px; line-height: 1.6; }
+#s-sched .total { position: absolute; left: 0; right: 0; bottom: 40px; display: flex; align-items: center; gap: 30px; padding: 30px 36px; background: var(--ink); color: var(--d1); border-radius: 6px; }
+#s-sched .total .v { font-size: 50px; font-weight: 600; letter-spacing: -.02em; }
+#s-sched .total .v small { font-size: 24px; color: var(--d2); font-weight: 500; }
+#s-sched .total p { font-size: 21px; color: var(--d2); line-height: 1.5; }
+#s-sched .total .k { font-size: 16px; letter-spacing: .22em; color: var(--brass-l); font-weight: 600; }
+
+/* ---------- KPI */
+#s-kpi .tbl { position: absolute; left: 0; right: 0; top: 270px; }
+#s-kpi .row { display: grid; grid-template-columns: 1fr 420px 90px 470px; align-items: center; padding: 28px 0; border-top: 1px solid var(--hair); }
+#s-kpi .row.h { border-top: none; padding-bottom: 12px; font-size: 16px; letter-spacing: .2em; color: var(--t3); font-weight: 600; }
+#s-kpi .row b { font-size: 28px; font-weight: 600; color: var(--t1); display: flex; align-items: center; gap: 16px; }
+#s-kpi .row b .ico { width: 32px; height: 32px; color: var(--brass); }
+#s-kpi .row .a { font-size: 27px; color: var(--t2); font-variant-numeric: tabular-nums; }
+#s-kpi .row .arr { color: var(--brass); font-size: 28px; }
+#s-kpi .row .b { font-size: 30px; font-weight: 700; color: var(--sea); font-variant-numeric: tabular-nums; }
+#s-kpi .row:last-child { border-bottom: 1px solid var(--hair); }
+
+/* ---------- conclusion */
+#s-concl .ph { inset: 0; }
+#s-concl .content { position: absolute; left: 120px; top: 96px; width: 900px; }
+#s-concl .content .title { font-size: 58px; }
+#s-concl .content p.body { font-size: 23px; line-height: 1.75; color: var(--d2); margin-top: 34px; }
+#s-concl .content p.body b { color: var(--d1); font-weight: 600; }
+#s-concl .chartbox { position: absolute; right: 120px; top: 300px; width: 640px; padding: 34px 30px 20px; background: rgba(11,17,24,.62); border: 1px solid rgba(244,239,231,.12); border-radius: 8px; }
+#s-concl .chartbox h4 { font-size: 16px; letter-spacing: .22em; color: var(--brass-l); font-weight: 600; margin-bottom: 8px; }
+
+/* ---------- closing */
+#s-close .ph { inset: 0; }
+#s-close .center { position: absolute; left: 0; right: 0; top: 330px; text-align: center; }
+#s-close .en { font-size: 88px; color: var(--brass-l); font-weight: 300; }
+#s-close h2 { font-family: var(--serif); font-size: 50px; font-weight: 400; color: #fff; margin-top: 26px; letter-spacing: -.02em; }
+#s-close .co { font-size: 22px; letter-spacing: .3em; color: var(--d2); margin-top: 40px; font-weight: 500; }
+#s-close .disc { position: absolute; left: 240px; right: 240px; bottom: 90px; text-align: center; font-size: 16px; line-height: 1.7; color: rgba(244,239,231,.55); }
+</style>
+</head>
+<body class="show-slot-tags">
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3 12h18v1.5a5.5 5.5 0 0 1-5.5 5.5h-7A5.5 5.5 0 0 1 3 13.5z"/><path d="M6 12V6.2a2.2 2.2 0 0 1 4.2-.9"/><path d="M7 19l-1 2M17 19l1 2"/></symbol>
+    <symbol id="i-shower" viewBox="0 0 24 24"><path d="M5 21V7a3 3 0 0 1 3-3h1"/><path d="M9 4h2a4 4 0 0 1 4 4H9z"/><path d="M10 11.5v1.5M12.5 11.5v1.5M15 11.5v1.5M11 15.5V17M13.5 15.5V17M16 15.5V17M12 19.5V21M14.5 19.5V21"/></symbol>
+    <symbol id="i-sauna" viewBox="0 0 24 24"><path d="M3 20.5h18"/><path d="M5 20.5V15h14v5.5"/><path d="M5 17.7h14"/><path d="M8.5 11.5c-1-1-1-2 0-3s1-2 0-3M12 11.5c-1-1-1-2 0-3s1-2 0-3M15.5 11.5c-1-1-1-2 0-3s1-2 0-3"/></symbol>
+    <symbol id="i-tea" viewBox="0 0 24 24"><path d="M4 9.5h12v3.5a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3.5c-.8.8-.8 1.7 0 2.5M11.5 3.5c-.8.8-.8 1.7 0 2.5"/><path d="M3 21.5h14"/></symbol>
+    <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M2.5 17h19"/><path d="M6.5 17a5.5 5.5 0 0 1 11 0"/><path d="M12 7.5V5M5.3 10.3 3.8 8.8M18.7 10.3l1.5-1.5"/><path d="M6 20.5h12"/></symbol>
+    <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 20c-4.2 0-7.6-3-8.5-7.2 3.2 0 6.3 1.6 8.5 4.2 2.2-2.6 5.3-4.2 8.5-4.2-.9 4.2-4.3 7.2-8.5 7.2z"/><path d="M12 17c-2.1-2.2-2.6-5.4 0-9.5 2.6 4.1 2.1 7.3 0 9.5z"/></symbol>
+    <symbol id="i-pool" viewBox="0 0 24 24"><path d="M2.5 17c1.6 0 1.6-1 3.2-1s1.6 1 3.2 1 1.6-1 3.1-1 1.6 1 3.2 1 1.6-1 3.2-1 1.6 1 3.1 1"/><path d="M2.5 21c1.6 0 1.6-1 3.2-1s1.6 1 3.2 1 1.6-1 3.1-1 1.6 1 3.2 1 1.6-1 3.2-1 1.6 1 3.1 1"/><path d="M8 14V5.2a2 2 0 0 1 3.9-.6M15 14V5.2a2 2 0 0 1 3.9-.6M8 8h7M8 11.2h7"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M3.5 17.5h17"/><path d="M5.5 17.5a6.5 6.5 0 0 1 13 0"/><path d="M12 11V8.8M10 8.5h4"/><path d="M2.5 20.5h19"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M7.5 14h2M11 14h2M14.5 14h2M7.5 17h2M11 17h2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.4A8.5 8.5 0 1 1 20.5 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 9.2v5.6l4.5-2.8z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M3 9h18M12 9v11.5"/><path d="M12 9c-2.5 0-5-1-5-3a2 2 0 0 1 3.8-.8L12 9l1.2-3.8A2 2 0 0 1 17 6c0 2-2.5 3-5 3z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-6.5-5.6-6.5-11.2a6.5 6.5 0 0 1 13 0c0 5.6-6.5 11.2-6.5 11.2z"/><circle cx="12" cy="10.2" r="2.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 9.5h18"/><path d="M12 16.4l-2.3-2.1a1.4 1.4 0 0 1 2.3-1.4 1.4 1.4 0 0 1 2.3 1.4z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.3 14.5A2.7 2.7 0 0 0 12 17.2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z"/></symbol>
+    <symbol id="i-leak" viewBox="0 0 24 24"><path d="M2.5 6.5h9a4.5 4.5 0 0 1 4.5 4.5v1"/><path d="M2.5 10.5h8"/><path d="M16 15.2s2.2 2.4 2.2 3.8a2.2 2.2 0 0 1-4.4 0c0-1.4 2.2-3.8 2.2-3.8z"/></symbol>
+    <symbol id="i-weight" viewBox="0 0 24 24"><path d="M5.5 20.5h13L17 10H7z"/><circle cx="12" cy="6.3" r="2.5"/></symbol>
+    <symbol id="i-humid" viewBox="0 0 24 24"><path d="M7 17.5a4.2 4.2 0 0 1-.5-8.4 6 6 0 0 1 11.6 1.7 3.4 3.4 0 0 1-.6 6.7z"/><path d="M8.5 21h.01M12 21h.01M15.5 21h.01"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21.5a6 6 0 0 0 6-6c0-4-3-6-4-9.5-1 2-1.2 3.6-2.6 4.6C10 9.6 9.4 8.4 9.4 7.3 7.4 9.3 6 11.9 6 15.5a6 6 0 0 0 6 6z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/><path d="M9 14l2 2 4-4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.2" cy="9" r="2.5"/><path d="M3 20a5.5 5.5 0 0 1 11 0M13.8 20a4.4 4.4 0 0 1 7.7-2.9"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 9.5l1.7 5.5 1.8-4.5 1.8 4.5 1.7-5.5M7.5 12h9"/></symbol>
+    <symbol id="i-rooms" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 12h17M12 3.5v17"/></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/><path d="M2.5 21h19"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3.5 20.5h17"/><path d="M6.5 17v-4M11 17V9M15.5 17v-6M20 17V5"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 3.5l3 3-3 3"/><path d="M4 11.5v-1a4 4 0 0 1 4-4h12"/><path d="M7 20.5l-3-3 3-3"/><path d="M20 12.5v1a4 4 0 0 1-4 4H4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v8M8 12h8"/></symbol>
+  </defs>
+</svg>
+
+<!-- 01 ======================================================= COVER -->
+<section class="slide dark" id="s-cover">
+  <div class="ph tag-right" data-slot="cover" style="inset:0"></div>
+  <div class="scrim-left"></div>
+  <div class="inner">
+    <div class="brand">㈜C&amp;C <span>Interior · Consulting</span></div>
+    <div class="cover-main">
+      <div class="kicker"><span class="rule"></span><span>Busan · Premium Private Couple Spa</span></div>
+      <h1>프리미엄 프라이빗<br>커플 스파</h1>
+      <p class="en-sub en">Three private hours, for two.</p>
+      <p class="cover-lead">둘만을 위한 3시간 — 프라이빗 스파에 스킨케어·바디케어를 더한<br>예약제 웰니스 공간 사업계획서</p>
+    </div>
+    <div class="cover-meta">
+      <div><b>사업계획서 · 영업 제안서</b><span>수정 가격정책 및 매출모델 반영본</span></div>
+      <div><b>2026. 09</b><span>사업성 검토 및 투자·임대인 협의용</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ======================================================= AT A GLANCE -->
+<section class="slide" id="s-glance">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">00</span><span class="rule"></span><span>At a Glance</span></div>
+    <h2 class="title">한눈에 보는 사업</h2>
+    <div class="left">
+      <p class="statement">가격은 <em>접근 가능하게,</em><br>공간·청결·서비스는<br><em>프리미엄으로.</em></p>
+      <p class="desc">3시간 단위 프라이빗 스파 대실을 중심으로 스킨케어·바디케어·다이어트 프로그램을 결합한 예약제 웰니스 공간입니다.</p>
+      <div class="tags"><span class="chip">20~40대 커플</span><span class="chip">기념일 고객</span><span class="chip">여성 2인</span><span class="chip">관광·데이트</span></div>
+    </div>
+    <div class="grid">
+      <div class="card stat"><svg class="ico"><use href="#i-clock"/></svg><div class="cap">Entry</div><div class="v">100,000<small>원</small></div><div class="l">2인 · 3시간 프라이빗 스파 대실<br>고객 유입용 핵심 상품</div></div>
+      <div class="card stat"><svg class="ico"><use href="#i-plus"/></svg><div class="cap">Signature</div><div class="v">150,000<small>원</small></div><div class="l">대표 결합상품<br>스파 + 스킨케어 (2인)</div></div>
+      <div class="card stat"><svg class="ico"><use href="#i-rooms"/></svg><div class="cap">Rooms</div><div class="v">9<small>실</small></div><div class="l">스파 객실<br>4F 실내 6실 + 5F 야외 3실</div></div>
+      <div class="card stat"><svg class="ico"><use href="#i-chart"/></svg><div class="cap">Revenue Goal</div><div class="v">월 1억<small>원+</small></div><div class="l">안정화 단계 목표<br>(초기 월 7,000만원 이상)</div></div>
+      <div class="card stat"><svg class="ico"><use href="#i-build"/></svg><div class="cap">Capex</div><div class="v">3.7<small>억원</small></div><div class="l">원가효율형 프리미엄<br>공사 목표액 (VAT 별도)</div></div>
+      <div class="card stat"><svg class="ico"><use href="#i-cal"/></svg><div class="cap">Launch</div><div class="v">10~14<small>주</small></div><div class="l">사업성 확정부터<br>소프트오픈까지</div></div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 03 ======================================================= OVERVIEW -->
+<section class="slide" id="s-overview">
+  <div class="paper-tex"></div>
+  <div class="ph" data-slot="concept"></div>
+  <div class="panel">
+    <div class="kicker"><span class="no">01</span><span class="rule"></span><span>Business Overview</span></div>
+    <h2 class="title">사업 개요</h2>
+    <p class="lead">일반 바디케어숍이나 대중형 찜질방과 차별화하여, 일본·서울에서 유행을 시작한 커플·소규모 프라이빗 스파에 스킨케어·바디케어·다이어트 프로그램을 결합합니다.</p>
+    <dl>
+      <dt>사업형태</dt><dd>예약제 프리미엄 프라이빗 커플 스파 + 웰니스/뷰티</dd>
+      <dt>핵심고객</dt><dd>20~40대 커플, 기념일 고객, 여성 2인 고객, 관광·데이트 고객</dd>
+      <dt>핵심상품</dt><dd>3시간 프라이빗 스파 대실 — 2인 기준 <b>100,000원</b></dd>
+      <dt>핵심 결합상품</dt><dd>스파 + 스킨케어 2인 <b>150,000원</b></dd>
+      <dt>부가서비스</dt><dd>바디케어 · 스킨케어 · 다이어트 프로그램</dd>
+      <dt>운영방식</dt><dd>예약 중심, 시간대별 회전, 룸별 프라이버시 강화</dd>
+      <dt>목표 포지셔닝</dt><dd>가격은 접근 가능하게, 공간·청결·서비스는 프리미엄으로</dd>
+    </dl>
+  </div>
+  <div class="ft" style="left:880px"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 04 ======================================================= POSITIONING -->
+<section class="slide" id="s-position">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">02</span><span class="rule"></span><span>Positioning</span></div>
+    <h2 class="title">찜질방도, 바디숍도 아닌 세 번째 선택</h2>
+    <p class="lead">커플·소규모 고객이 독립된 공간을 3시간 단위로 이용하는 프라이빗 스파 — 일본·서울에서 시작된 흐름을 부산에.</p>
+    <div class="cmp">
+      <div class="rh ch"></div>
+      <div class="ch"><span><small>Public Spa</small>대중형 찜질방</span></div>
+      <div class="ch"><span><small>Body Care Shop</small>일반 바디케어숍</span></div>
+      <div class="ch us"><span><small>Private Couple Spa</small>프라이빗 커플 스파</span></div>
+
+      <div class="rh"><span>공간</span></div>
+      <div><span>여러 고객이 함께 쓰는 공용 시설</span></div>
+      <div><span>관리실(베드) 중심</span></div>
+      <div class="us"><span>2인 독립 스파룸 — <b>욕조·샤워·핀란드식 사우나·티존</b></span></div>
+
+      <div class="rh"><span>이용 방식</span></div>
+      <div><span>입장 후 자유 이용</span></div>
+      <div><span>시술 시간 단위 예약</span></div>
+      <div class="us"><span><b>3시간 단위 대실 예약</b>, 시간대별 회전</span></div>
+
+      <div class="rh"><span>주요 고객</span></div>
+      <div><span>가족·단체·개인 등 불특정 다수</span></div>
+      <div><span>개인 관리 고객</span></div>
+      <div class="us"><span>커플 · 기념일 · 여성 2인 · 관광·데이트</span></div>
+
+      <div class="rh"><span>경험 가치</span></div>
+      <div><span>목욕·휴식</span></div>
+      <div><span>관리·시술</span></div>
+      <div class="us"><span>프라이버시 + 휴식 + 케어 + 사진·기념일 경험</span></div>
+
+      <div class="rh"><span>가격 구조</span></div>
+      <div><span>1인 입장료 중심</span></div>
+      <div><span>시술 단가 중심</span></div>
+      <div class="us last"><span>2인 <b>10만원</b> 진입 → 결합상품으로 객단가 상승</span></div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 05 ======================================================= LOCATIONS -->
+<section class="slide dark" id="s-loc">
+  <div class="inner">
+    <div class="kicker"><span class="no">03</span><span class="rule"></span><span>Location Concept · Busan</span></div>
+    <h2 class="title">부산 3대 권역, 세 가지 무드</h2>
+    <p class="lead" style="margin-top:12px">해운대 · 남포동 · 명지 — 권역별 고객 특성에 맞춘 공간 연출과 대표 상품 구성(안)</p>
+    <div class="cards">
+      <div class="lc">
+        <div class="ph" data-slot="loc_haeundae"></div><div class="scrim-bottom"></div>
+        <div class="txt">
+          <div class="en">Haeundae</div>
+          <h3>해운대 <span>Ocean &amp; Skyline</span></h3>
+          <ul><li>해변·호텔이 모인 부산 대표 관광 상권</li><li>오션뷰·야경을 담은 루프탑 야외 스파 연출</li><li>관광객·호캉스·기념일 커플 수요</li></ul>
+          <div class="rec"><b>대표 상품</b>스파 + 바디케어 · 6F 풀 VIP</div>
+        </div>
+      </div>
+      <div class="lc">
+        <div class="ph" data-slot="loc_nampo"></div><div class="scrim-bottom"></div>
+        <div class="txt">
+          <div class="en">Nampo-dong</div>
+          <h3>남포동 <span>Harbor &amp; Night</span></h3>
+          <ul><li>BIFF광장·광복로·자갈치 원도심 관광·쇼핑</li><li>항구와 부산타워 야경의 데이트 코스</li><li>데이트 커플·여성 2인·국내외 관광객</li></ul>
+          <div class="rec"><b>대표 상품</b>3시간 스파 · 스파 + 스킨케어</div>
+        </div>
+      </div>
+      <div class="lc">
+        <div class="ph" data-slot="loc_myeongji"></div><div class="scrim-bottom"></div>
+        <div class="txt">
+          <div class="en">Myeongji</div>
+          <h3>명지 <span>Sunset &amp; New Town</span></h3>
+          <ul><li>명지국제신도시 신흥 주거 생활권</li><li>낙동강 하구의 노을·갈대 풍경</li><li>30~40대 부부·지역 재방문 고객</li></ul>
+          <div class="rec"><b>대표 상품</b>프리미엄 커플 · 바디 리셋 회원권</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span>※ 권역별 연출·상품 구성(안) — 실제 입지는 임대조건·상권조사로 확정</span><span class="pg"></span></div>
+</section>
+
+<!-- 06 ======================================================= FLOORS -->
+<section class="slide" id="s-floors">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">04</span><span class="rule"></span><span>Space Plan</span></div>
+    <h2 class="title">층별 공간 및 운영계획</h2>
+    <div class="legend"><span><i style="background:var(--sea)"></i>핵심 매출원 — 4F·5F 스파 9실</span><span><i style="background:var(--brass)"></i>업셀링 장치 — 5F 바디케어 · 6F 풀</span><span><i style="background:var(--stone)"></i>고객 접점</span></div>
+    <div class="stack">
+      <div class="fl up">
+        <div class="no">6F</div>
+        <div class="blk"><h3>4인용 소형 프라이빗 풀 + 테라스</h3><div class="items"><span class="it"><svg class="ico"><use href="#i-pool"/></svg>4인 프라이빗 풀</span><span class="it"><svg class="ico"><use href="#i-sunset"/></svg>테라스</span></div></div>
+        <div class="role"><p>VIP · 기념일 · 단체 소규모 상품</p><span class="chip brass">업셀링 장치</span></div>
+      </div>
+      <div class="fl mix">
+        <div class="no">5F</div>
+        <div class="blk"><h3>야외 스파 3실 + 테라스 티 존 · 바디케어 3실</h3><div class="items"><span class="it"><svg class="ico"><use href="#i-bath"/></svg>야외 스파 3실</span><span class="it"><svg class="ico"><use href="#i-tea"/></svg>테라스 티 존(실외)</span><span class="it"><svg class="ico"><use href="#i-lotus"/></svg>바디케어 3실(실내)</span></div></div>
+        <div class="role"><p>야외 스파 경험 + 바디케어</p><div style="display:flex;gap:8px"><span class="chip sea">핵심 매출원</span><span class="chip brass">업셀링 장치</span></div></div>
+      </div>
+      <div class="fl core">
+        <div class="no">4F</div>
+        <div class="blk"><h3>실내 프라이빗 스파 6실</h3><div class="items"><span class="it"><svg class="ico"><use href="#i-bath"/></svg>2인용 욕조</span><span class="it"><svg class="ico"><use href="#i-shower"/></svg>샤워</span><span class="it"><svg class="ico"><use href="#i-sauna"/></svg>핀란드식 사우나</span><span class="it"><svg class="ico"><use href="#i-tea"/></svg>티/리프레시 존</span></div></div>
+        <div class="role"><p>3시간 프라이빗 스파 대실</p><span class="chip sea">핵심 매출원</span></div>
+      </div>
+      <div class="fl">
+        <div class="no">3F</div>
+        <div class="blk"><h3>리셉션 · 상담 · 대기</h3><div class="items"><span class="it"><svg class="ico"><use href="#i-bell"/></svg>예약 확인</span><span class="it"><svg class="ico"><use href="#i-chat"/></svg>상담</span><span class="it"><svg class="ico"><use href="#i-card"/></svg>회원관리</span></div></div>
+        <div class="role"><p>고객 접점 · 결합상품 전환 상담</p><span class="chip">고객 접점</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span>운영상 4F·5F 스파를 핵심 매출원으로, 5F 바디케어실과 6F 풀은 객단가를 올리는 업셀링 장치로 활용</span><span class="pg"></span></div>
+</section>
+
+<!-- 07 ======================================================= 4F -->
+<section class="slide dark" id="s-4f">
+  <div class="ph main tag-top tag-right" data-slot="floor4_spa"></div>
+  <div class="scrim-left"></div>
+  <div class="content">
+    <div class="kicker"><span class="no">4F</span><span class="rule"></span><span>Indoor Private Spa</span></div>
+    <h2 class="title" style="font-size:68px">실내 프라이빗 스파 6실</h2>
+    <p class="lead">두 사람만을 위한 독립 공간에서 욕조·샤워·핀란드식 사우나·티 존을 3시간 동안 온전히.</p>
+    <div class="feat">
+      <div><svg class="ico"><use href="#i-bath"/></svg><p><b>2인용 욕조</b><span>룸별 독립 욕조, 프라이버시 강화</span></p></div>
+      <div><svg class="ico"><use href="#i-shower"/></svg><p><b>샤워</b><span>룸 내 전용 샤워 공간</span></p></div>
+      <div><svg class="ico"><use href="#i-sauna"/></svg><p><b>핀란드식 사우나</b><span>6실 모두 전용 사우나</span></p></div>
+      <div><svg class="ico"><use href="#i-tea"/></svg><p><b>티/리프레시 존</b><span>휴식과 사진 콘텐츠 포인트</span></p></div>
+    </div>
+    <div class="price"><span class="num">100,000원</span><span>2인 · 3시간 프라이빗 스파 대실</span></div>
+  </div>
+  <div class="insets">
+    <div class="inset"><div class="ph" data-slot="floor4_sauna"></div><p><span>Sauna</span>핀란드식 사우나</p></div>
+    <div class="inset"><div class="ph" data-slot="floor4_tea"></div><p><span>Tea Zone</span>티/리프레시 존</p></div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 08 ======================================================= 5F -->
+<section class="slide dark" id="s-5f">
+  <div class="ph main" data-slot="floor5_outdoor"></div>
+  <div class="side">
+    <div class="content">
+      <div class="kicker"><span class="no">5F</span><span class="rule"></span><span>Outdoor Spa &amp; Body Care</span></div>
+      <h2 class="title">야외 스파 3실<br>+ 바디케어 3실</h2>
+      <p class="lead" style="font-size:24px">하늘이 열린 야외 스파와 테라스 티 존, 실내 바디케어실을 한 층에 — 스파 경험이 자연스럽게 케어로 이어지는 동선.</p>
+      <div class="items">
+        <div><svg class="ico"><use href="#i-bath"/></svg>야외 스파 3실</div>
+        <div><svg class="ico"><use href="#i-tea"/></svg>테라스 티 존 <small>실외</small></div>
+        <div><svg class="ico"><use href="#i-lotus"/></svg>바디케어 3실 <small>실내</small></div>
+      </div>
+    </div>
+    <div class="sub">
+      <div class="ph" data-slot="floor5_body"></div>
+      <div class="row"><span class="chip">스파 + 바디케어 190,000원 · 2인</span><span class="chip">바디케어 9~18만원 · 1인</span></div>
+    </div>
+  </div>
+  <div class="ft" style="left:1190px"><span>㈜C&amp;C · Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 09 ======================================================= 6F -->
+<section class="slide dark" id="s-6f">
+  <div class="ph main" data-slot="floor6_pool"></div>
+  <div class="scrim-right"></div>
+  <div class="content">
+    <div class="kicker"><span class="no">6F</span><span class="rule"></span><span>Private Pool &amp; Terrace</span></div>
+    <h2 class="title" style="font-size:66px">4인 프라이빗 풀<br>+ 테라스</h2>
+    <p class="lead">VIP·기념일·소규모 단체를 위한 최상층. 주말·공휴일·기념일에는 할인 대신 상품 차별화로 객단가를 높입니다.</p>
+    <div class="stat"><div class="v">250,000~350,000<small>원</small></div><div class="l">6F 프라이빗 풀 패키지 · 최대 4인</div></div>
+    <div class="chips"><span class="chip">생일 · 기념일 · 프로포즈</span><span class="chip">주말 · 공휴일 VIP</span><span class="chip">소규모 단체</span></div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 10 ======================================================= JOURNEY -->
+<section class="slide" id="s-journey">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">05</span><span class="rule"></span><span>Customer Journey</span></div>
+    <h2 class="title">예약부터 재방문까지, 객단가를 높이는 동선</h2>
+    <div class="steps">
+      <div class="card st"><div class="ph" data-slot="sns"></div><div class="stb"><span class="n">01</span><svg class="ico"><use href="#i-cal"/></svg><h3>예약</h3><p>네이버·자사예약·전화·DM 등 복수 채널에서 3시간 단위로 예약</p><span class="chip sea">스파 대실 10만원</span></div></div>
+      <div class="card st"><div class="ph" data-slot="reception"></div><div class="stb"><span class="n">02</span><svg class="ico"><use href="#i-bell"/></svg><h3>3F 체크인·상담</h3><p>예약 확인과 함께 스킨·바디케어 옵션, 패키지 업그레이드 상담</p><span class="chip">결합상품 전환</span></div></div>
+      <div class="card st"><div class="ph" data-slot="floor4_spa"></div><div class="stb"><span class="n">03</span><svg class="ico"><use href="#i-bath"/></svg><h3>4F·5F 스파 3시간</h3><p>욕조·샤워·핀란드식 사우나·티존, 야외 스파에서 둘만의 시간</p><span class="chip brass">스파 + 스킨 15만원</span></div></div>
+      <div class="card st"><div class="ph" data-slot="floor5_body"></div><div class="stb"><span class="n">04</span><svg class="ico"><use href="#i-lotus"/></svg><h3>케어 업셀</h3><p>바디케어·고급 스킨케어·다이어트 케어를 선택형 옵션으로</p><span class="chip">팀당 15~25만원</span></div></div>
+      <div class="card st"><div class="ph" data-slot="anniversary"></div><div class="stb"><span class="n">05</span><svg class="ico"><use href="#i-repeat"/></svg><h3>재방문·회원화</h3><p>리뷰·재방문 쿠폰·친구 추천, 체형·바디 리셋 프로그램 회원권</p><span class="chip">회원권 55~120만원</span></div></div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 11 ======================================================= PRICING -->
+<section class="slide" id="s-pricing">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">06</span><span class="rule"></span><span>Pricing</span></div>
+    <h2 class="title">가격정책 — 진입은 낮게, 결합으로 높게</h2>
+    <div class="legend"><span><i style="background:var(--sea)"></i>2인 상품 권장 판매가</span><span><i style="background:var(--brass)"></i>대표 상품</span><span><i style="background:var(--sea);opacity:.38"></i>가격 범위(상단)</span></div>
+    <svg class="chart" id="c-price"></svg>
+    <div class="side">
+      <h4>1인 케어 옵션</h4>
+      <div class="opt"><b>스킨케어 단독</b><div class="p">9~12만원</div><span>1인 · 비숙박/비스파 고객 유입</span></div>
+      <div class="opt"><b>바디케어</b><div class="p">9~18만원</div><span>1인 · 5F 부가매출</span></div>
+      <div class="opt"><b>다이어트 케어</b><div class="p">12~18만원</div><span>1인 · 스파 고객 업셀</span></div>
+      <div class="mem"><div class="k">MEMBERSHIP</div><div class="v">55~120<small>만원</small></div><p>다이어트 프로그램 회원권 — 반복매출·회원 라인</p></div>
+    </div>
+  </div>
+  <div class="ft"><span>핵심 가격을 기준으로 진입가격을 낮추고, 결합상품에서 객단가를 높이는 구조</span><span class="pg"></span></div>
+</section>
+
+<!-- 12 ======================================================= STRATEGY -->
+<section class="slide dark" id="s-strategy">
+  <div class="inner">
+    <div class="kicker"><span class="no">07</span><span class="rule"></span><span>Pricing Strategy</span></div>
+    <h2 class="title">10만원으로 들어와, 15~25만원의 경험으로</h2>
+    <svg class="stairs" id="c-stairs" viewBox="0 0 820 560"></svg>
+    <div class="pts">
+      <div class="pt"><span class="n">1</span><div><b>대실이 아닌 ‘프라이빗 공간 대여료’</b><p>3시간 10만원을 ‘싸구려 스파’가 아닌 공간 대여료로 인식시키고, 시설·청결·사진 콘텐츠로 가치를 만든다.</p></div></div>
+      <div class="pt"><span class="n">2</span><div><b>대표상품 스파 + 스킨케어 15만원</b><p>2인 결합상품을 대표상품으로 배치해 단순 대실 고객을 결합상품 고객으로 전환한다.</p></div></div>
+      <div class="pt"><span class="n">3</span><div><b>선택형 옵션으로 결제액 상승</b><p>바디케어·고급 스킨케어를 옵션으로 붙여 1팀당 평균 결제액을 10만원 → 15~25만원까지 끌어올린다.</p></div></div>
+      <div class="pt"><span class="n">4</span><div><b>할인 대신 상품 차별화</b><p>주말·공휴일·기념일에는 VIP 패키지와 6F 풀로 객단가를 높인다.</p></div></div>
+      <div class="pt"><span class="n">5</span><div><b>다이어트 = ‘체형·바디 리셋 프로그램’</b><p>별도 사업이 아닌 브랜딩된 프로그램으로 운영해 반복 방문을 유도한다.</p></div></div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 13 ======================================================= TARGET -->
+<section class="slide" id="s-target">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">08</span><span class="rule"></span><span>Target Customers</span></div>
+    <h2 class="title">목표 고객 및 시장 전략</h2>
+    <div class="cards">
+      <div class="card tc"><div class="ph" data-slot="sns"></div><div class="body"><h3>20~30대 커플</h3><div class="k">주요 니즈</div><div class="need">데이트 · 기념일 · 사진</div><div class="k">공략 상품</div><div class="prods"><span class="chip">3시간 스파</span><span class="chip brass">스파 + 스킨</span></div></div></div>
+      <div class="card tc"><div class="ph" data-slot="skincare"></div><div class="body"><h3>여성 2인</h3><div class="k">주요 니즈</div><div class="need">피부 · 휴식 · 힐링</div><div class="k">공략 상품</div><div class="prods"><span class="chip brass">스파 + 스킨</span><span class="chip">바디케어</span></div></div></div>
+      <div class="card tc"><div class="ph" data-slot="floor4_tea"></div><div class="body"><h3>30~40대 부부</h3><div class="k">주요 니즈</div><div class="need">프라이버시 · 휴식</div><div class="k">공략 상품</div><div class="prods"><span class="chip">프리미엄 커플</span></div></div></div>
+      <div class="card tc"><div class="ph" data-slot="loc_haeundae"></div><div class="body"><h3>관광객</h3><div class="k">주요 니즈</div><div class="need">짧은 체류 · 특별한 경험</div><div class="k">공략 상품</div><div class="prods"><span class="chip">스파 + 바디케어</span><span class="chip">VIP</span></div></div></div>
+      <div class="card tc"><div class="ph" data-slot="diet"></div><div class="body"><h3>다이어트 고객</h3><div class="k">주요 니즈</div><div class="need">체형관리 · 반복방문</div><div class="k">공략 상품</div><div class="prods"><span class="chip">바디 리셋</span><span class="chip">회원권</span></div></div></div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 14 ======================================================= OPERATIONS -->
+<section class="slide" id="s-ops">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">09</span><span class="rule"></span><span>Operations</span></div>
+    <h2 class="title">운영계획 — 3시간 단위 예약, 품질 중심 회전</h2>
+    <div class="stats">
+      <div class="card stat"><div class="v" style="font-size:40px; white-space:nowrap">11:00–23:00</div><div class="l">권장 운영시간 · 월 30일 기준</div></div>
+      <div class="card stat"><div class="v">9<small>실</small></div><div class="l">스파 객실 (4F 6실 + 5F 야외 3실)</div></div>
+      <div class="card stat"><div class="v">3<small>시간</small></div><div class="l">1회 이용시간</div></div>
+      <div class="card stat"><div class="v">2.0~2.5<small>회</small></div><div class="l">객실당 실제 목표 회전 (일)</div></div>
+    </div>
+    <div class="right">
+      <h4>하루 이론 회전 — 객실당 최대 4회</h4>
+      <div class="day"><div>11:00–14:00</div><div>14:00–17:00</div><div>17:00–20:00</div><div>20:00–23:00</div></div>
+      <p class="note" style="margin-top:12px">객실 정비시간을 확보하여 회전 품질을 관리 — 실제 목표는 객실당 평균 2.0~2.5회</p>
+      <div class="blk"><h4>객실당 일 회전 목표</h4><svg id="c-turns"></svg></div>
+      <div class="blk" style="margin-top:30px; display:grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        <div><h4>예약 방식</h4><div class="chips"><span class="chip">네이버 예약</span><span class="chip">자사 예약</span><span class="chip">전화 · DM</span></div></div>
+        <div><h4>핵심 KPI</h4><div class="chips"><span class="chip">객실 가동률</span><span class="chip">팀당 객단가</span><span class="chip">결합상품 전환율</span><span class="chip">재방문율</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 15 ======================================================= REVENUE -->
+<section class="slide" id="s-revenue">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">10</span><span class="rule"></span><span>Revenue Simulation</span></div>
+    <h2 class="title">월 매출 시뮬레이션 — 9개 스파실 기준</h2>
+    <div class="legend"><span><i style="background:var(--sea)"></i>스파 대실</span><span><i style="background:var(--brass)"></i>결합·부가 상품 (스파+스킨 · 바디케어 · 스킨케어 · 다이어트)</span></div>
+    <svg class="chart" id="c-revenue"></svg>
+    <table>
+      <thead><tr><th>단위: 만원</th><th>보수적</th><th class="base">기준</th><th>공격적</th></tr></thead>
+      <tbody>
+        <tr><td>스파 대실</td><td>4,050</td><td class="base">5,940</td><td>8,100</td></tr>
+        <tr><td>스파 + 스킨</td><td>900</td><td class="base">1,800</td><td>3,570</td></tr>
+        <tr><td>바디케어</td><td>960</td><td class="base">2,160</td><td>3,600</td></tr>
+        <tr><td>스킨케어</td><td>600</td><td class="base">1,320</td><td>2,730</td></tr>
+        <tr><td>다이어트</td><td>540</td><td class="base">1,375</td><td>2,600</td></tr>
+        <tr class="total"><td>월 매출</td><td>7,050</td><td class="base">12,595</td><td>20,600</td></tr>
+        <tr class="aux"><td>스파 회전 (환산)</td><td>1.5회</td><td class="base">2.2회</td><td>3.0회</td></tr>
+      </tbody>
+    </table>
+    <p class="note fn">※ 9개 스파실 기준 단순화한 사업성 시뮬레이션. 실제 매출은 평일/주말 편차, 계절성, 날씨, 객실별 가격 차등에 따라 달라짐. ‘스파+스킨’ 매출은 단순 대실 매출과 별개로 계산한 예시로, 중복집계가 발생하지 않도록 POS 상품코드를 분리해야 함. 스파 회전은 스파 대실 매출 ÷ (9실 × 10만원 × 30일)로 환산.</p>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 16 ======================================================= BASE CASE -->
+<section class="slide" id="s-base">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">11</span><span class="rule"></span><span>Base Case</span></div>
+    <h2 class="title">권장 기준 시나리오 — 월 1억원 전후를 1차 목표로</h2>
+    <div class="rows" id="base-rows"></div>
+    <div class="right">
+      <h4>단계별 월 매출 목표</h4>
+      <svg id="c-roadmap"></svg>
+      <p class="note" style="margin-top:6px">초기에는 평일 공실을 감안해 객실 회전보다 ‘스파+스킨케어’와 바디케어 업셀 비중을 높이는 것이 중요</p>
+    </div>
+  </div>
+  <div class="ft"><span>※ 상품별 단순 합산 예시 — 중복판매 여부는 보수적으로 검토. 안정화 후 VIP·6F 풀·패키지 판매로 1억원 이상 확장</span><span class="pg"></span></div>
+</section>
+
+<!-- 17 ======================================================= CAPEX -->
+<section class="slide" id="s-capex">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">12</span><span class="rule"></span><span>Investment</span></div>
+    <h2 class="title">비용 및 투자계획</h2>
+    <div class="left">
+      <div class="hero"><div class="v">3.7<small>억원</small></div><div class="l">원가효율형 프리미엄 공사 목표액 (VAT 별도)<br>VAT 포함 단순 환산 시 약 4.07억원</div></div>
+      <div class="groups" id="capex-groups"></div>
+      <p class="note" style="margin-top:18px">※ 세부 항목 단순 합계는 3억 8,300만원으로 목표액 대비 1,300만원 조정이 필요합니다. 실제 견적은 구조보강·전기증설·급탕·소방·배수 조건에 따라 크게 달라질 수 있습니다.</p>
+    </div>
+    <svg class="chart" id="c-capex"></svg>
+  </div>
+  <div class="ft"><span>단위: 만원 · VAT 별도</span><span class="pg"></span></div>
+</section>
+
+<!-- 18 ======================================================= OPEX / BEP -->
+<section class="slide" id="s-opex">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">13</span><span class="rule"></span><span>Cost &amp; Break-even</span></div>
+    <h2 class="title">월 비용 구조와 손익분기점</h2>
+    <div class="tbl" id="opex-rows"></div>
+    <div class="bep">
+      <div class="card eq"><div class="k">월 고정성 비용</div><div class="v">약 4,500<small>만원</small></div></div>
+      <div class="op">+</div>
+      <div class="card eq"><div class="k">매출연동 비용 (소모품·플랫폼·카드 등)</div><div class="v">10~15<small>% of 매출</small></div></div>
+      <div class="op">=</div>
+      <div class="eq res"><div class="k">1차 손익분기점 목표</div><div class="v">월 6,500~7,000<small>만원</small></div></div>
+      <p class="note" style="margin-top:18px">월 1억원을 안정적으로 달성하면 시설투자 회수 속도가 빨라질 수 있으나, 세금·이자·감가상각·대규모 수선비를 포함한 최종 순이익은 별도 계산이 필요합니다.</p>
+    </div>
+  </div>
+  <div class="ft"><span>비용은 예시 — 특히 인건비와 임차료는 실제 운영형태에 따라 손익분기점을 크게 바꿈</span><span class="pg"></span></div>
+</section>
+
+<!-- 19 ======================================================= MARKETING -->
+<section class="slide" id="s-mkt">
+  <div class="paper-tex"></div>
+  <div class="ph" data-slot="sns"></div>
+  <div class="panel">
+    <div class="kicker"><span class="no">14</span><span class="rule"></span><span>Marketing</span></div>
+    <h2 class="title">마케팅 및 고객 확보 전략</h2>
+    <div class="grid">
+      <div class="card mc"><svg class="ico"><use href="#i-search"/></svg><b>네이버 플레이스·예약</b><p>‘부산 프라이빗 스파·커플 스파·야외 스파·데이트 스파’ 키워드 중심, 사진과 이용시간을 명확히 노출</p></div>
+      <div class="card mc"><svg class="ico"><use href="#i-phone"/></svg><b>SNS 숏폼</b><p>욕조·사우나·야외 스파·6F 풀의 공간 경험을 중심으로 15~30초 영상 제작</p></div>
+      <div class="card mc"><svg class="ico"><use href="#i-gift"/></svg><b>기념일 상품</b><p>생일·기념일·프로포즈 전후 고객 대상 꽃/케이크/무알코올 스파클링 등 부가상품 구성</p></div>
+      <div class="card mc"><svg class="ico"><use href="#i-pin"/></svg><b>관광 연계</b><p>호텔·숙박업소·관광업체와 제휴해 외국인·타지역 방문객 예약 확보</p></div>
+      <div class="card mc"><svg class="ico"><use href="#i-star"/></svg><b>리뷰 마케팅</b><p>첫 방문 할인보다 리뷰·재방문 쿠폰·친구 추천 리워드로 광고비 관리</p></div>
+      <div class="card mc"><svg class="ico"><use href="#i-card"/></svg><b>회원화</b><p>스파 고객에게 피부·바디·다이어트 상담을 연결해 단발성 대실 고객을 반복 고객으로 전환</p></div>
+    </div>
+  </div>
+  <div class="ft" style="left:740px"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 20 ======================================================= RISK -->
+<section class="slide" id="s-risk">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">15</span><span class="rule"></span><span>Risk Management</span></div>
+    <h2 class="title">운영상 핵심 리스크와 대응</h2>
+    <div class="grid">
+      <div class="card rc"><svg class="ico"><use href="#i-drop"/></svg><h3>급탕 부족</h3><p>9실 동시 이용을 가정한 급탕 용량 및 저탕조 검토</p></div>
+      <div class="card rc"><svg class="ico"><use href="#i-bolt"/></svg><h3>전력 부족</h3><p>사우나 6실 및 제습/HVAC 동시부하 검토 후 전기증설</p></div>
+      <div class="card rc"><svg class="ico"><use href="#i-leak"/></svg><h3>누수·배수</h3><p>욕조·샤워·야외스파 방수와 배수구/펌프를 최우선 공정으로 관리</p></div>
+      <div class="card rc"><svg class="ico"><use href="#i-weight"/></svg><h3>5F·6F 하중</h3><p>야외 스파·풀의 구조하중을 구조기술자와 사전 검토</p></div>
+      <div class="card rc"><svg class="ico"><use href="#i-humid"/></svg><h3>습기·곰팡이</h3><p>제습·환기량을 충분히 확보하고 유지관리 계획 수립</p></div>
+      <div class="card rc"><svg class="ico"><use href="#i-flame"/></svg><h3>소방·피난</h3><p>실별 구획, 피난동선, 방화문·감지설비 등 관련 기준 사전 확인</p></div>
+      <div class="card rc"><svg class="ico"><use href="#i-doc"/></svg><h3>인허가</h3><p>바디케어·스킨케어·다이어트 프로그램 제공 방식에 따른 적용 법규와 자격요건 확인</p></div>
+      <div class="card rc note"><svg class="ico"><use href="#i-build"/></svg><h3>설계 단계 선검토</h3><p>급탕·전기증설·소방·배수·구조보강은 공사비 변동 요인 — 착공 전 조사로 확정</p></div>
+    </div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 21 ======================================================= SCHEDULE -->
+<section class="slide" id="s-sched">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">16</span><span class="rule"></span><span>Schedule</span></div>
+    <h2 class="title">사업 추진 일정</h2>
+    <div class="line"></div>
+    <div class="cols" id="sched-cols"></div>
+    <div class="total"><div><div class="k">TOTAL</div><div class="v">약 10~14<small>주</small></div></div><p>사업성 확정부터 촬영·온라인 등록·사전예약·소프트오픈까지 — 현장 조건에 따라 변동</p></div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 22 ======================================================= KPI -->
+<section class="slide" id="s-kpi">
+  <div class="paper-tex"></div>
+  <div class="inner">
+    <div class="kicker"><span class="no">17</span><span class="rule"></span><span>Key Metrics</span></div>
+    <h2 class="title">대표 운영 KPI</h2>
+    <div class="tbl" id="kpi-rows"></div>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 23 ======================================================= CONCLUSION -->
+<section class="slide dark" id="s-concl">
+  <div class="ph" data-slot="closing"></div>
+  <div class="scrim-all" style="background:rgba(11,17,24,.72)"></div>
+  <div class="content">
+    <div class="kicker"><span class="no">18</span><span class="rule"></span><span>Conclusion</span></div>
+    <h2 class="title">핵심은 높은 단가가 아니라,<br>객단가를 높이는 구조</h2>
+    <p class="body">10만원의 진입가격으로 고객을 확보한 뒤 <b>15만원 스파+스킨케어</b>, <b>19~25만원 결합상품</b>, <b>29만원 이상 VIP 상품</b>으로 객단가를 높입니다. 초반에는 가격을 무리하게 올리기보다 공간 경험과 예약 편의성으로 고객을 모으고, 2인 패키지와 바디케어·스킨케어·다이어트의 교차판매로 고객당 매출을 확대합니다.</p>
+    <p class="note" style="margin-top:30px">공사비 약 3.7억원 기준 — 실제 투자회수기간은 임대료·인건비·세금·금융비용·공실률을 포함한 현금흐름표로 별도 검증</p>
+  </div>
+  <div class="chartbox">
+    <h4>단계별 월 매출 목표</h4>
+    <svg id="c-roadmap-dark"></svg>
+  </div>
+  <div class="ft"><span>㈜C&amp;C · Premium Private Couple Spa</span><span class="pg"></span></div>
+</section>
+
+<!-- 24 ======================================================= CLOSING -->
+<section class="slide dark" id="s-close">
+  <div class="ph tag-top" data-slot="cover"></div>
+  <div class="scrim-all" style="background:rgba(11,17,24,.66)"></div>
+  <div class="center">
+    <div class="en">Three private hours, for two.</div>
+    <h2>프리미엄 프라이빗 커플 스파</h2>
+    <div class="co">㈜C&amp;C · INTERIOR &amp; CONSULTING</div>
+  </div>
+  <p class="disc">※ 본 문서는 사업성 검토 및 투자·임대인 협의용 초안입니다. 실제 공사비·임차료·인허가·인력비는 현장 조건과 계약조건에 따라 확정해야 합니다.<br>※ 해당 자료는 ㈜C&amp;C의 인테리어 및 컨설팅의 주관적 사업 평가를 기준으로 작성하였음을 명시합니다.</p>
+</section>
+
+<script src="data.js"></script>
+<script src="photos.js" onerror="window.PHOTOS = window.PHOTOS || {}"></script>
+<script src="charts.js"></script>
+<script>
+(async function () {
+  const P = window.PLAN, S = window.SLOTS, PH = window.PHOTOS || {};
+  const params = new URLSearchParams(location.search);
+  if (params.get("tags") === "0") document.body.classList.remove("show-slot-tags");
+
+  // photos
+  document.querySelectorAll(".ph[data-slot]").forEach((ph) => {
+    const slot = ph.dataset.slot, def = S[slot] || {}, real = PH[slot];
+    const img = document.createElement("img");
+    img.src = real ? real.src : `../assets/atmos/${def.fb || "atmos_city_bokeh"}.jpg`;
+    img.style.objectPosition = (real && real.pos) || def.pos || "50% 50%";
+    ph.prepend(img);
+    if (!real) {
+      ph.classList.add("is-fallback");
+      const tag = document.createElement("div");
+      tag.className = "slot-tag";
+      tag.innerHTML = `<b>PHOTO</b><span>${def.brief || slot}</span>`;
+      ph.appendChild(tag);
+    }
+  });
+
+  // page numbers
+  const slides = [...document.querySelectorAll(".slide")];
+  slides.forEach((s, i) => { const pg = s.querySelector(".ft .pg"); if (pg) pg.textContent = String(i + 1).padStart(2, "0") + " / " + slides.length; });
+
+  // charts
+  Charts.priceLadder(document.getElementById("c-price"), { w: 1100, h: 560 });
+  Charts.revenue(document.getElementById("c-revenue"), { w: 1060, h: 470 });
+  Charts.turns(document.getElementById("c-turns"), { w: 960, h: 250, labelW: 170 });
+  Charts.roadmap(document.getElementById("c-roadmap"), { w: 560, h: 470 });
+  Charts.roadmap(document.getElementById("c-roadmap-dark"), { w: 580, h: 420, dark: true });
+  const capexSorted = [...P.capex].sort((a, b) => b.v - a.v);
+  Charts.barList(document.getElementById("c-capex"), capexSorted, { w: 1060, h: 690, labelW: 250, bh: 16, fontSize: 18, max: 4000 });
+
+  // base case rows
+  const br = document.getElementById("base-rows");
+  br.innerHTML = P.baseCase.map((r) => `<div class="r"><b>${r.name}</b><span>${r.formula}</span><div class="v">${Charts.fmt(r.value)}만원</div></div>`).join("") +
+    `<div class="r tot"><b>합계</b><span>상품별 단순 합산</span><div class="v">${Charts.man(P.baseCase.reduce((a, r) => a + r.value, 0))}</div></div>`;
+
+  // capex groups
+  const groups = [
+    ["공간 조성 (철거·벽체·마감·방수·유리)", ["철거·폐기물", "경량벽체·방음·도어", "바닥·벽·천장 마감", "습식·방수·타일", "유리 파티션"]],
+    ["설비 (급배수·전기·환기·소방)", ["급배수·펌프", "전기·조명·제어", "환기·제습·냉난방", "소방"]],
+    ["층별 특화 (6F 풀·5F 데크·바디케어실·3F)", ["6F 4인 풀", "5F 야외 데크·방수", "5F 바디케어실 3실", "3F 리셉션·상담"]],
+    ["스파 시설 (욕조·샤워·사우나)", ["2인 욕조 6실", "샤워 6실", "핀란드식 사우나 6실"]],
+    ["설계·현장관리 · 예비비", ["설계·현장관리", "예비비"]],
+    ["가구·집기 · 사인·브랜딩", ["가구·티존·집기", "사인·브랜딩"]]
+  ];
+  const byName = Object.fromEntries(P.capex.map((d) => [d.name, d.v]));
+  document.getElementById("capex-groups").innerHTML = groups.map(([g, items]) => `<div class="g"><span>${g}</span><b>${Charts.fmt(items.reduce((a, n) => a + byName[n], 0))}</b></div>`).join("");
+
+  // opex rows
+  const maxO = 1500;
+  document.getElementById("opex-rows").innerHTML = P.opex.map((o) => `<div class="row"><b>${o.name}</b><div class="bar"><i style="width:${(o.v / maxO) * 100}%"></i></div><div class="v">${Charts.fmt(o.v)}</div><span>${o.note}</span></div>`).join("") +
+    `<div class="row var"><b>카드·예약 수수료</b><div class="bar">매출의 3~5%</div><div class="v">—</div><span>채널에 따라 변동</span></div>` +
+    `<div class="row tot"><b>고정성 비용 합계</b><div class="bar"></div><div class="v">${Charts.fmt(P.opex.reduce((a, o) => a + o.v, 0))}</div><span>단위: 만원 / 월</span></div>`;
+
+  // schedule
+  const sIcons = ["i-search", "i-doc", "i-build", "i-users", "i-phone"];
+  document.getElementById("sched-cols").innerHTML = P.schedule.map((s, i) => `<div class="c ${i === 2 ? "build" : ""}"><div class="hd"><div class="step">Step ${i + 1}</div><div class="pill">${s.dur}</div></div><svg class="ico"><use href="#${sIcons[i]}"/></svg><h3>${["사업성·조사", "디자인·견적", "시공", "설치·교육", "오픈 준비"][i]}</h3><p>${s.task}</p></div>`).join("");
+
+  // KPI
+  const kIcons = ["i-repeat", "i-coin", "i-plus", "i-lotus", "i-users", "i-chart"];
+  document.getElementById("kpi-rows").innerHTML = `<div class="row h"><span>KPI</span><span>초기 목표</span><span></span><span>안정화 목표</span></div>` +
+    P.kpis.map((k, i) => `<div class="row"><b><svg class="ico"><use href="#${kIcons[i]}"/></svg>${k.name}</b><div class="a">${k.init}</div><div class="arr">→</div><div class="b">${k.stable}</div></div>`).join("");
+
+  // stairs (strategy)
+  (function stairs() {
+    const svg = document.getElementById("c-stairs");
+    const steps = [
+      { p: "10만원", t: "진입", d: ["프라이빗", "스파 대실"] },
+      { p: "15만원", t: "대표", d: ["스파 +", "스킨케어"] },
+      { p: "19~25만원", t: "결합", d: ["+ 바디케어", "· 스킨케어"] },
+      { p: "29만원+", t: "VIP", d: ["프리미엄 커플", "· 6F 풀"] }
+    ];
+    const NS = "http://www.w3.org/2000/svg";
+    const mk = (tag, a, txt) => { const n = document.createElementNS(NS, tag); for (const k in a) n.setAttribute(k, a[k]); if (txt) n.textContent = txt; svg.appendChild(n); return n; };
+    const w = 196, base = 540, hs = [170, 262, 354, 446];
+    steps.forEach((s, i) => {
+      const x = 4 + i * w, y = base - hs[i];
+      const hero = i === 1;
+      mk("rect", { x, y, width: w - 10, height: hs[i], rx: 3, fill: hero ? "rgba(181,138,58,.20)" : `rgba(62,146,196,${0.10 + i * 0.05})`, stroke: hero ? "#B58A3A" : "rgba(62,146,196,.55)", "stroke-width": 1 });
+      mk("text", { x: x + 20, y: y + 46, fill: "#F4EFE7", "font-size": s.p.length > 6 ? 27 : 31, "font-weight": 600, "font-family": "Pretendard" }, s.p);
+      mk("text", { x: x + 20, y: y + 78, fill: hero ? "#C9A66B" : "#9FC3DA", "font-size": 17, "font-weight": 700, "font-family": "Pretendard", "letter-spacing": "0.16em" }, s.t);
+      s.d.forEach((line, k) => mk("text", { x: x + 20, y: y + 116 + k * 26, fill: "#C3C9CE", "font-size": 18, "font-family": "Pretendard" }, line));
+    });
+    mk("line", { x1: 0, x2: 790, y1: base, y2: base, stroke: "rgba(244,239,231,.3)" });
+    mk("path", { d: "M24 40 H 300", stroke: "#C9A66B", "stroke-width": 1.5, fill: "none" });
+    mk("path", { d: "M292 34 L300 40 L292 46", stroke: "#C9A66B", "stroke-width": 1.5, fill: "none" });
+    mk("text", { x: 24, y: 24, fill: "#C3C9CE", "font-size": 19, "font-family": "Pretendard" }, "1팀당 평균 결제액");
+    mk("text", { x: 316, y: 48, fill: "#F4EFE7", "font-size": 24, "font-weight": 600, "font-family": "Pretendard" }, "10만원 → 15~25만원");
+  })();
+
+  await document.fonts.ready;
+  await Promise.all([...document.images].map((im) => im.complete ? 1 : new Promise((r) => { im.onload = im.onerror = r; })));
+  document.body.dataset.ready = "1";
+})();
+</script>
+</body>
+</html>
