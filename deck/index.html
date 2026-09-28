@@ -70,7 +70,7 @@
 /* ---------- floors */
 #s-floors .stack { position: absolute; left: 0; right: 0; top: 300px; display: flex; flex-direction: column; gap: 14px; }
 #s-floors .fl { display: grid; grid-template-columns: 150px 1fr 380px; align-items: stretch; min-height: 138px; }
-#s-floors .fl .no { font-family: var(--latin); font-size: 76px; font-weight: 400; color: var(--t1); line-height: 1; display: flex; align-items: center; }
+#s-floors .fl .no { font-family: var(--latin); font-feature-settings: "lnum" 1; font-size: 76px; font-weight: 400; color: var(--t1); line-height: 1; display: flex; align-items: center; }
 #s-floors .fl .blk { background: var(--card); border: 1px solid var(--hair); border-left: 5px solid var(--stone); border-radius: 4px; padding: 22px 30px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
 #s-floors .fl.core .blk { border-left-color: var(--sea); }
 #s-floors .fl.up .blk { border-left-color: var(--brass); }
@@ -838,7 +838,7 @@
     <h2>프리미엄 프라이빗 커플 스파</h2>
     <div class="co">㈜C&amp;C · INTERIOR &amp; CONSULTING</div>
   </div>
-  <p class="disc">※ 본 문서는 사업성 검토 및 투자·임대인 협의용 초안입니다. 실제 공사비·임차료·인허가·인력비는 현장 조건과 계약조건에 따라 확정해야 합니다.<br>※ 해당 자료는 ㈜C&amp;C의 인테리어 및 컨설팅의 주관적 사업 평가를 기준으로 작성하였음을 명시합니다.</p>
+  <p class="disc">※ 본 문서는 사업성 검토 및 투자·임대인 협의용 초안입니다. 실제 공사비·임차료·인허가·인력비는 현장 조건과 계약조건에 따라 확정해야 합니다.<br>※ 해당 자료는 ㈜C&amp;C의 인테리어 및 컨설팅의 주관적 사업 평가를 기준으로 작성하였음을 명시합니다.<br>※ 본 자료의 공간·인물 이미지는 이해를 돕기 위한 연출용 컨셉 이미지입니다.</p>
 </section>
 
 <script src="data.js"></script>
@@ -912,30 +912,15 @@
     P.kpis.map((k, i) => `<div class="row"><b><svg class="ico"><use href="#${kIcons[i]}"/></svg>${k.name}</b><div class="a">${k.init}</div><div class="arr">→</div><div class="b">${k.stable}</div></div>`).join("");
 
   // stairs (strategy)
-  (function stairs() {
+  (function () {
     const svg = document.getElementById("c-stairs");
-    const steps = [
-      { p: "10만원", t: "진입", d: ["프라이빗", "스파 대실"] },
-      { p: "15만원", t: "대표", d: ["스파 +", "스킨케어"] },
-      { p: "19~25만원", t: "결합", d: ["+ 바디케어", "· 스킨케어"] },
-      { p: "29만원+", t: "VIP", d: ["프리미엄 커플", "· 6F 풀"] }
-    ];
+    Charts.stairs(svg, { w: 820, h: 560 });
     const NS = "http://www.w3.org/2000/svg";
     const mk = (tag, a, txt) => { const n = document.createElementNS(NS, tag); for (const k in a) n.setAttribute(k, a[k]); if (txt) n.textContent = txt; svg.appendChild(n); return n; };
-    const w = 196, base = 540, hs = [170, 262, 354, 446];
-    steps.forEach((s, i) => {
-      const x = 4 + i * w, y = base - hs[i];
-      const hero = i === 1;
-      mk("rect", { x, y, width: w - 10, height: hs[i], rx: 3, fill: hero ? "rgba(181,138,58,.20)" : `rgba(62,146,196,${0.10 + i * 0.05})`, stroke: hero ? "#B58A3A" : "rgba(62,146,196,.55)", "stroke-width": 1 });
-      mk("text", { x: x + 20, y: y + 46, fill: "#F4EFE7", "font-size": s.p.length > 6 ? 27 : 31, "font-weight": 600, "font-family": "Pretendard" }, s.p);
-      mk("text", { x: x + 20, y: y + 78, fill: hero ? "#C9A66B" : "#9FC3DA", "font-size": 17, "font-weight": 700, "font-family": "Pretendard", "letter-spacing": "0.16em" }, s.t);
-      s.d.forEach((line, k) => mk("text", { x: x + 20, y: y + 116 + k * 26, fill: "#C3C9CE", "font-size": 18, "font-family": "Pretendard" }, line));
-    });
-    mk("line", { x1: 0, x2: 790, y1: base, y2: base, stroke: "rgba(244,239,231,.3)" });
     mk("path", { d: "M24 40 H 300", stroke: "#C9A66B", "stroke-width": 1.5, fill: "none" });
     mk("path", { d: "M292 34 L300 40 L292 46", stroke: "#C9A66B", "stroke-width": 1.5, fill: "none" });
-    mk("text", { x: 24, y: 24, fill: "#C3C9CE", "font-size": 19, "font-family": "Pretendard" }, "1팀당 평균 결제액");
-    mk("text", { x: 316, y: 48, fill: "#F4EFE7", "font-size": 24, "font-weight": 600, "font-family": "Pretendard" }, "10만원 → 15~25만원");
+    mk("text", { x: 24, y: 24, fill: "#C3C9CE", "font-size": 19 }, "1팀당 평균 결제액");
+    mk("text", { x: 316, y: 48, fill: "#F4EFE7", "font-size": 24, "font-weight": 600 }, "10만원 → 15~25만원");
   })();
 
   await document.fonts.ready;

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>프리미엄 프라이빗 커플 스파 — 홍보영상</title>
+<link rel="stylesheet" href="../deck/styles.css">
+<style>
+html, body { margin: 0; padding: 0 !important; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #05080C; }
+.scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.bg { position: absolute; inset: 0; overflow: hidden; }
+.bg .kb { position: absolute; inset: -4%; will-change: transform; }
+.bg .kb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shade-l { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,12,18,.92) 0%, rgba(8,12,18,.72) 34%, rgba(8,12,18,.18) 66%, rgba(8,12,18,0) 82%); }
+.shade-b { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,12,18,.92) 0%, rgba(8,12,18,.55) 36%, rgba(8,12,18,0) 64%); }
+.shade-all { position: absolute; inset: 0; background: rgba(8,12,18,.58); }
+.line { display: block; overflow: hidden; padding-bottom: .08em; }
+.line > span { display: inline-block; will-change: transform; }
+.fade { will-change: opacity, transform; }
+.kick { font-family: var(--sans); font-weight: 600; font-size: 20px; letter-spacing: .3em; text-transform: uppercase; color: var(--brass-l); }
+.serif { font-family: var(--serif); letter-spacing: -.03em; }
+.latin { font-family: var(--latin); font-style: italic; }
+.pill { display: inline-flex; align-items: center; gap: 12px; padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(244,239,231,.35); color: #F4EFE7; font-size: 28px; font-weight: 500; background: rgba(8,12,18,.35); }
+.pill b { color: var(--brass-l); font-weight: 600; }
+
+/* V1 */
+#v1 .txt { position: absolute; left: 140px; top: 290px; width: 1100px; color: #F7F2EA; }
+#v1 h1 { font-family: var(--serif); font-weight: 400; font-size: 128px; line-height: 1.12; letter-spacing: -.035em; margin-top: 34px; }
+#v1 .en { font-size: 58px; color: var(--brass-l); margin-top: 30px; }
+#v1 .brand { position: absolute; left: 140px; bottom: 100px; font-size: 22px; letter-spacing: .3em; color: var(--d2); font-weight: 500; }
+
+/* V2 */
+#v2 .txt { position: absolute; left: 140px; top: 300px; width: 1000px; color: #F4EFE7; }
+#v2 .small { font-size: 34px; color: var(--d2); font-weight: 500; }
+#v2 h2 { font-family: var(--serif); font-weight: 500; font-size: 92px; line-height: 1.2; margin-top: 22px; letter-spacing: -.035em; }
+#v2 .pills { display: flex; gap: 18px; margin-top: 56px; }
+
+/* V3 */
+#v3 .center { position: absolute; left: 0; right: 0; top: 330px; text-align: center; color: #F4EFE7; }
+#v3 .a { font-size: 40px; color: var(--d2); font-weight: 500; }
+#v3 h2 { font-family: var(--serif); font-weight: 500; font-size: 110px; margin-top: 26px; letter-spacing: -.035em; }
+#v3 .chips { display: flex; justify-content: center; gap: 16px; margin-top: 70px; }
+
+/* V4 floors */
+#v4 .flr { position: absolute; inset: 0; opacity: 0; }
+#v4 .info { position: absolute; left: 140px; bottom: 130px; color: #F4EFE7; width: 1200px; }
+#v4 .no { font-family: var(--latin); font-weight: 400; font-size: 190px; line-height: .8; color: var(--brass-l); font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+#v4 .name { font-family: var(--serif); font-weight: 500; font-size: 76px; margin-top: 26px; letter-spacing: -.03em; }
+#v4 .sub { font-size: 30px; color: var(--d2); margin-top: 16px; }
+#v4 .feats { display: flex; gap: 16px; margin-top: 34px; flex-wrap: wrap; }
+#v4 .feats .pill { font-size: 25px; padding: 12px 22px; }
+#v4 .feats .ico { width: 30px; height: 30px; color: var(--brass-l); stroke-width: 1.7; }
+#v4 .rail { position: absolute; right: 120px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 34px; align-items: flex-end; }
+#v4 .rail div { font-family: var(--latin); font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; font-size: 40px; color: rgba(244,239,231,.35); display: flex; align-items: center; gap: 18px; }
+#v4 .rail div i { display: inline-block; width: 40px; height: 1px; background: currentColor; }
+#v4 .rail div.on { color: var(--brass-l); }
+
+/* V5 locations */
+#v5 .panel { position: absolute; top: 0; bottom: 0; width: 640px; overflow: hidden; }
+#v5 .panel .bg .kb { inset: -5%; }
+#v5 .panel .cap { position: absolute; left: 50px; right: 40px; bottom: 90px; color: #F4EFE7; }
+#v5 .panel .cap .latin { font-size: 72px; color: var(--brass-l); line-height: 1; }
+#v5 .panel .cap h3 { font-family: var(--serif); font-weight: 500; font-size: 52px; margin-top: 14px; }
+#v5 .panel .cap p { font-size: 24px; color: var(--d2); margin-top: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; }
+#v5 .panel .cap .rec { font-size: 24px; color: #F4EFE7; margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(244,239,231,.25); letter-spacing: 0; text-transform: none; font-weight: 500; }
+#v5 .panel .cap .rec b { color: var(--brass-l); margin-right: 10px; }
+#v5 .top { position: absolute; left: 0; right: 0; top: 0; height: 300px; background: linear-gradient(180deg, rgba(8,12,18,.85), rgba(8,12,18,0)); }
+#v5 .title { position: absolute; left: 0; right: 0; top: 90px; text-align: center; color: #F4EFE7; }
+#v5 .title h2 { font-family: var(--serif); font-weight: 500; font-size: 64px; margin-top: 16px; letter-spacing: -.03em; }
+#v5 .sep { position: absolute; top: 0; bottom: 0; width: 2px; background: rgba(8,12,18,.9); }
+
+/* V6 stairs */
+#v6 { background: var(--ink); }
+#v6 .hd { position: absolute; left: 140px; top: 110px; color: #F4EFE7; }
+#v6 .hd h2 { font-family: var(--serif); font-weight: 500; font-size: 76px; margin-top: 24px; letter-spacing: -.03em; }
+#v6 svg { position: absolute; left: 140px; top: 360px; }
+#v6 .note { position: absolute; right: 150px; top: 430px; width: 560px; color: #F4EFE7; }
+#v6 .note .k { font-size: 26px; color: var(--d2); }
+#v6 .note .v { font-size: 76px; font-weight: 600; letter-spacing: -.03em; margin-top: 14px; }
+#v6 .note .v small { font-size: 34px; color: var(--d2); font-weight: 500; }
+#v6 .note p { font-size: 24px; color: var(--d2); line-height: 1.6; margin-top: 26px; }
+
+/* V7 numbers */
+#v7 { background: var(--paper); }
+#v7 .paper-tex { opacity: 1; }
+#v7 .hd { position: absolute; left: 140px; top: 100px; }
+#v7 .hd h2 { font-family: var(--serif); font-weight: 500; font-size: 66px; margin-top: 22px; letter-spacing: -.03em; color: var(--t1); }
+#v7 .kick { color: var(--brass-d); }
+#v7 .part { position: absolute; inset: 0; }
+#v7 .legend { position: absolute; left: 300px; top: 320px; font-size: 22px; }
+#v7 #vc-revenue { position: absolute; left: 140px; top: 380px; }
+#v7 .bepnote { position: absolute; right: 120px; top: 420px; width: 470px; }
+#v7 .bepnote .k { font-size: 22px; color: var(--t3); font-weight: 600; letter-spacing: .06em; }
+#v7 .bepnote .v { font-size: 50px; font-weight: 600; letter-spacing: -.03em; color: var(--t1); margin-top: 8px; white-space: nowrap; }
+#v7 .bepnote .v small { font-size: 28px; color: var(--t2); font-weight: 500; }
+#v7 .bepnote p { font-size: 22px; color: var(--t2); line-height: 1.6; margin-top: 16px; }
+#v7 #vc-roadmap { position: absolute; left: 140px; top: 330px; }
+#v7 .tiles { position: absolute; right: 140px; top: 330px; width: 900px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+#v7 .tiles .card { padding: 34px 34px 36px; }
+#v7 .tiles .v { font-size: 64px; font-weight: 600; letter-spacing: -.03em; color: var(--t1); }
+#v7 .tiles .v small { font-size: 30px; color: var(--t2); font-weight: 500; margin-left: 4px; }
+#v7 .tiles .l { font-size: 24px; color: var(--t2); margin-top: 12px; }
+
+/* V8 closing */
+#v8 .c1, #v8 .c2 { position: absolute; left: 0; right: 0; text-align: center; color: #F4EFE7; }
+#v8 .c1 { top: 380px; }
+#v8 .c1 .serif { font-size: 82px; font-weight: 400; line-height: 1.35; }
+#v8 .c1 em { font-style: normal; color: var(--brass-l); }
+#v8 .c2 { top: 340px; }
+#v8 .c2 .latin { font-size: 100px; color: var(--brass-l); font-weight: 300; }
+#v8 .c2 h2 { font-family: var(--serif); font-weight: 400; font-size: 60px; margin-top: 30px; letter-spacing: -.02em; }
+#v8 .c2 .co { font-size: 26px; letter-spacing: .34em; color: var(--d2); margin-top: 50px; font-weight: 500; }
+#v8 .disc { position: absolute; left: 0; right: 0; bottom: 70px; text-align: center; font-size: 19px; color: rgba(244,239,231,.55); }
+#fade { position: absolute; inset: 0; background: #000; pointer-events: none; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3 12h18v1.5a5.5 5.5 0 0 1-5.5 5.5h-7A5.5 5.5 0 0 1 3 13.5z"/><path d="M6 12V6.2a2.2 2.2 0 0 1 4.2-.9"/><path d="M7 19l-1 2M17 19l1 2"/></symbol>
+  <symbol id="i-shower" viewBox="0 0 24 24"><path d="M5 21V7a3 3 0 0 1 3-3h1"/><path d="M9 4h2a4 4 0 0 1 4 4H9z"/><path d="M10 11.5v1.5M12.5 11.5v1.5M15 11.5v1.5M11 15.5V17M13.5 15.5V17M16 15.5V17M12 19.5V21M14.5 19.5V21"/></symbol>
+  <symbol id="i-sauna" viewBox="0 0 24 24"><path d="M3 20.5h18"/><path d="M5 20.5V15h14v5.5"/><path d="M5 17.7h14"/><path d="M8.5 11.5c-1-1-1-2 0-3s1-2 0-3M12 11.5c-1-1-1-2 0-3s1-2 0-3M15.5 11.5c-1-1-1-2 0-3s1-2 0-3"/></symbol>
+  <symbol id="i-tea" viewBox="0 0 24 24"><path d="M4 9.5h12v3.5a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3.5c-.8.8-.8 1.7 0 2.5M11.5 3.5c-.8.8-.8 1.7 0 2.5"/><path d="M3 21.5h14"/></symbol>
+  <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 20c-4.2 0-7.6-3-8.5-7.2 3.2 0 6.3 1.6 8.5 4.2 2.2-2.6 5.3-4.2 8.5-4.2-.9 4.2-4.3 7.2-8.5 7.2z"/><path d="M12 17c-2.1-2.2-2.6-5.4 0-9.5 2.6 4.1 2.1 7.3 0 9.5z"/></symbol>
+  <symbol id="i-pool" viewBox="0 0 24 24"><path d="M2.5 17c1.6 0 1.6-1 3.2-1s1.6 1 3.2 1 1.6-1 3.1-1 1.6 1 3.2 1 1.6-1 3.2-1 1.6 1 3.1 1"/><path d="M2.5 21c1.6 0 1.6-1 3.2-1s1.6 1 3.2 1 1.6-1 3.1-1 1.6 1 3.2 1 1.6-1 3.2-1 1.6 1 3.1 1"/><path d="M8 14V5.2a2 2 0 0 1 3.9-.6M15 14V5.2a2 2 0 0 1 3.9-.6M8 8h7M8 11.2h7"/></symbol>
+  <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M2.5 17h19"/><path d="M6.5 17a5.5 5.5 0 0 1 11 0"/><path d="M12 7.5V5M5.3 10.3 3.8 8.8M18.7 10.3l1.5-1.5"/><path d="M6 20.5h12"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M3.5 17.5h17"/><path d="M5.5 17.5a6.5 6.5 0 0 1 13 0"/><path d="M12 11V8.8M10 8.5h4"/><path d="M2.5 20.5h19"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.4A8.5 8.5 0 1 1 20.5 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 9.5h18"/><path d="M12 16.4l-2.3-2.1a1.4 1.4 0 0 1 2.3-1.4 1.4 1.4 0 0 1 2.3 1.4z"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M3 9h18M12 9v11.5"/><path d="M12 9c-2.5 0-5-1-5-3a2 2 0 0 1 3.8-.8L12 9l1.2-3.8A2 2 0 0 1 17 6c0 2-2.5 3-5 3z"/></symbol>
+</defs></svg>
+
+<div id="stage">
+  <!-- V1 opening -->
+  <section class="scene" id="v1" data-in="0" data-out="6">
+    <div class="bg"><div class="kb" data-slot="cover"></div></div>
+    <div class="shade-l"></div>
+    <div class="tx"><div class="txt">
+      <div class="kick fade" id="v1k">Busan · Premium Private Couple Spa</div>
+      <h1><span class="line"><span id="v1l1">프리미엄 프라이빗</span></span><span class="line"><span id="v1l2">커플 스파</span></span></h1>
+      <div class="latin en fade" id="v1en">Three private hours, for two.</div>
+    </div>
+    <div class="brand fade" id="v1b">㈜C&amp;C · INTERIOR &amp; CONSULTING</div></div>
+  </section>
+
+  <!-- V2 concept -->
+  <section class="scene" id="v2" data-in="6" data-out="12">
+    <div class="bg"><div class="kb" data-slot="concept"></div></div>
+    <div class="shade-l"></div>
+    <div class="tx"><div class="txt">
+      <div class="small fade" id="v2a">찜질방도, 바디숍도 아닌</div>
+      <h2><span class="line"><span id="v2l1">둘만을 위한</span></span><span class="line"><span id="v2l2">독립된 프라이빗 스파</span></span></h2>
+      <div class="pills">
+        <span class="pill fade" id="v2p1"><b>3시간</b> 단위 대실</span>
+        <span class="pill fade" id="v2p2">2인 <b>100,000원</b></span>
+        <span class="pill fade" id="v2p3">예약제 운영</span>
+      </div>
+    </div>
+  </section></div>
+
+  <!-- V3 trend / target -->
+  <section class="scene" id="v3" data-in="12" data-out="18">
+    <div class="bg"><div class="kb" data-slot="__city"></div></div>
+    <div class="shade-all" style="background:rgba(8,12,18,.45)"></div>
+    <div class="tx"><div class="center">
+      <div class="a fade" id="v3a">일본·서울에서 시작된 커플 프라이빗 스파</div>
+      <h2><span class="line"><span id="v3l1">이제, 부산에서.</span></span></h2>
+      <div class="chips">
+        <span class="pill fade" id="v3c1">20~30대 커플</span>
+        <span class="pill fade" id="v3c2">여성 2인</span>
+        <span class="pill fade" id="v3c3">30~40대 부부</span>
+        <span class="pill fade" id="v3c4">관광객</span>
+        <span class="pill fade" id="v3c5">다이어트 고객</span>
+      </div>
+    </div>
+  </section></div>
+
+  <!-- V4 floors -->
+  <section class="scene" id="v4" data-in="18" data-out="42">
+    <div class="flr" id="f3">
+      <div class="bg"><div class="kb" data-slot="reception"></div></div><div class="shade-b"></div>
+      <div class="info ftx"><div class="no">3F</div><div class="name">리셉션 · 상담 · 대기</div><div class="sub">예약 확인부터 옵션 상담, 회원관리까지 — 고객 접점</div>
+        <div class="feats"><span class="pill"><svg class="ico"><use href="#i-bell"/></svg>예약 확인</span><span class="pill"><svg class="ico"><use href="#i-chat"/></svg>옵션 상담</span><span class="pill"><svg class="ico"><use href="#i-card"/></svg>회원관리</span></div></div>
+    </div>
+    <div class="flr" id="f4">
+      <div class="bg"><div class="kb" data-slot="floor4_spa"></div></div><div class="shade-b"></div>
+      <div class="info ftx"><div class="no">4F</div><div class="name">실내 프라이빗 스파 6실</div><div class="sub">두 사람만을 위한 3시간 — 핵심 매출원</div>
+        <div class="feats"><span class="pill"><svg class="ico"><use href="#i-bath"/></svg>2인용 욕조</span><span class="pill"><svg class="ico"><use href="#i-shower"/></svg>샤워</span><span class="pill"><svg class="ico"><use href="#i-sauna"/></svg>핀란드식 사우나</span><span class="pill"><svg class="ico"><use href="#i-tea"/></svg>티/리프레시 존</span></div></div>
+    </div>
+    <div class="flr" id="f5">
+      <div class="bg"><div class="kb" data-slot="floor5_outdoor"></div></div><div class="shade-b"></div>
+      <div class="info ftx"><div class="no">5F</div><div class="name">야외 스파 3실 + 바디케어 3실</div><div class="sub">하늘이 열린 야외 스파와 테라스 티 존, 이어지는 바디케어</div>
+        <div class="feats"><span class="pill"><svg class="ico"><use href="#i-bath"/></svg>야외 스파 3실</span><span class="pill"><svg class="ico"><use href="#i-tea"/></svg>테라스 티 존</span><span class="pill"><svg class="ico"><use href="#i-lotus"/></svg>바디케어 3실</span></div></div>
+    </div>
+    <div class="flr" id="f6">
+      <div class="bg"><div class="kb" data-slot="floor6_pool"></div></div><div class="shade-b"></div>
+      <div class="info ftx"><div class="no">6F</div><div class="name">4인 프라이빗 풀 + 테라스</div><div class="sub">VIP · 기념일 · 소규모 단체 — 패키지 250,000~350,000원</div>
+        <div class="feats"><span class="pill"><svg class="ico"><use href="#i-pool"/></svg>최대 4인</span><span class="pill"><svg class="ico"><use href="#i-gift"/></svg>기념일 · 프로포즈</span><span class="pill"><svg class="ico"><use href="#i-sunset"/></svg>테라스</span></div></div>
+    </div>
+    <div class="tx"><div class="rail fade" id="rail"><div data-f="6">6F<i></i></div><div data-f="5">5F<i></i></div><div data-f="4">4F<i></i></div><div data-f="3">3F<i></i></div></div></div>
+  </section>
+
+  <!-- V5 locations -->
+  <section class="scene" id="v5" data-in="42" data-out="51">
+    <div class="panel" id="p1" style="left:0"><div class="bg"><div class="kb" data-slot="loc_haeundae"></div></div><div class="shade-b"></div>
+      <div class="tx"><div class="cap fade" id="c1"><div class="latin">Haeundae</div><h3>해운대</h3><p>Ocean &amp; Skyline</p><div class="rec"><b>추천</b>스파 + 바디케어 · 6F 풀 VIP</div></div></div></div>
+    <div class="panel" id="p2" style="left:640px"><div class="bg"><div class="kb" data-slot="loc_nampo"></div></div><div class="shade-b"></div>
+      <div class="tx"><div class="cap fade" id="c2"><div class="latin">Nampo-dong</div><h3>남포동</h3><p>Harbor &amp; Night</p><div class="rec"><b>추천</b>3시간 스파 · 스파 + 스킨</div></div></div></div>
+    <div class="panel" id="p3" style="left:1280px"><div class="bg"><div class="kb" data-slot="loc_myeongji"></div></div><div class="shade-b"></div>
+      <div class="tx"><div class="cap fade" id="c3"><div class="latin">Myeongji</div><h3>명지</h3><p>Sunset &amp; New Town</p><div class="rec"><b>추천</b>프리미엄 커플 · 바디 리셋</div></div></div></div>
+    <div class="sep" style="left:639px"></div><div class="sep" style="left:1279px"></div>
+    <div class="top" id="v5top"></div>
+    <div class="tx"><div class="title fade" id="v5t"><div class="kick">Location Concept · Busan</div><h2>부산 3대 권역, 세 가지 무드</h2></div></div>
+  </section>
+
+  <!-- V6 stairs -->
+  <section class="scene" id="v6" data-in="51" data-out="60">
+    <div class="bg" style="opacity:.35"><div class="kb" data-slot="__city"></div></div>
+    <div class="tx"><div class="hd"><div class="kick fade" id="v6k">Pricing Strategy</div><h2><span class="line"><span id="v6l1">10만원으로 들어와, 15~25만원의 경험으로</span></span></h2></div>
+    <svg id="vc-stairs"></svg>
+    <div class="note fade" id="v6n"><div class="k">1팀당 평균 결제액</div><div class="v">10만 → 15~25<small>만원</small></div><p>스파 + 스킨케어 15만원을 대표상품으로, 바디케어·고급 스킨케어는 선택형 옵션으로. 주말·기념일엔 할인 대신 VIP 패키지와 6F 풀.</p></div></div>
+  </section>
+
+  <!-- V7 numbers -->
+  <section class="scene" id="v7" data-in="60" data-out="72">
+    <div class="paper-tex"></div>
+    <div class="tx"><div class="part" id="v7a">
+      <div class="hd"><div class="kick fade" id="v7k1">Revenue Simulation</div><h2><span class="line"><span id="v7l1">월 매출 시뮬레이션 — 9개 스파실 기준</span></span></h2></div>
+      <div class="legend fade" id="v7lg"><span><i style="background:var(--sea)"></i>스파 대실</span><span><i style="background:var(--brass)"></i>결합·부가 상품</span></div>
+      <svg id="vc-revenue"></svg>
+      <div class="bepnote fade" id="v7bep"><div class="k">1차 손익분기 목표</div><div class="v">6,500~7,000<small>만원/월</small></div><p>월 고정성 비용 약 4,500만원, 매출연동 비용 10~15% 가정</p></div>
+    </div>
+    <div class="part" id="v7b">
+      <div class="hd"><div class="kick fade" id="v7k2">Growth Roadmap</div><h2><span class="line"><span id="v7l2">월 7,000만원에서 1억원+로</span></span></h2></div>
+      <svg id="vc-roadmap"></svg>
+      <div class="tiles">
+        <div class="card fade" id="v7t1"><div class="v">9<small>실</small></div><div class="l">스파 객실 · 4F 6실 + 5F 야외 3실</div></div>
+        <div class="card fade" id="v7t2"><div class="v">2.0~2.5<small>회</small></div><div class="l">객실당 일 목표 회전 · 11:00–23:00</div></div>
+        <div class="card fade" id="v7t3"><div class="v">3.7<small>억원</small></div><div class="l">공사 목표액 (VAT 별도)</div></div>
+        <div class="card fade" id="v7t4"><div class="v">10~14<small>주</small></div><div class="l">사업성 확정부터 소프트오픈까지</div></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- V8 closing -->
+  <section class="scene" id="v8" data-in="72" data-out="84">
+    <div class="bg"><div class="kb" data-slot="closing"></div></div>
+    <div class="shade-all" style="background:rgba(8,12,18,.62)"></div>
+    <div class="c1"><div class="serif"><span class="line"><span id="v8l1">가격은 <em>접근 가능하게,</em></span></span><span class="line"><span id="v8l2">공간·청결·서비스는 <em>프리미엄으로.</em></span></span></div></div>
+    <div class="c2"><div class="latin fade" id="v8en">Three private hours, for two.</div><h2 class="fade" id="v8h">프리미엄 프라이빗 커플 스파</h2><div class="co fade" id="v8co">㈜C&amp;C · INTERIOR &amp; CONSULTING</div></div>
+    <div class="disc fade" id="v8d">※ 공간·인물 이미지는 연출용 컨셉 이미지이며, 수치는 사업계획서 기준 시뮬레이션입니다.</div>
+  </section>
+
+  <div id="fade"></div>
+</div>
+
+<script src="../deck/data.js"></script>
+<script src="../deck/photos.js" onerror="window.PHOTOS = window.PHOTOS || {}"></script>
+<script src="../deck/charts.js"></script>
+<script>
+(function () {
+  const S = window.SLOTS, PH = window.PHOTOS || {};
+  const DUR = 84;
+  window.DURATION = DUR;
+  const $ = (id) => document.getElementById(id);
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const seg = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
+  const eo = (x) => 1 - Math.pow(1 - x, 3);                  // ease-out cubic
+  const eio = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+
+  // photos (stand-in atmosphere images where a real photo is missing)
+  document.querySelectorAll(".kb[data-slot]").forEach((kb) => {
+    const slot = kb.dataset.slot;
+    const img = document.createElement("img");
+    if (slot === "__city") img.src = "../assets/atmos/atmos_city_bokeh.jpg";
+    else {
+      const def = S[slot] || {}, real = PH[slot];
+      img.src = real ? real.src : `../assets/atmos/${def.fb || "atmos_city_bokeh"}.jpg`;
+      img.style.objectPosition = (real && real.pos) || def.pos || "50% 50%";
+    }
+    kb.appendChild(img);
+  });
+
+  // helpers ------------------------------------------------------------
+  function fadeUp(el, t, a, d, dist) {           // fade + rise
+    const p = eo(seg(t, a, a + (d || 0.8)));
+    el.style.opacity = p;
+    el.style.transform = `translateY(${(1 - p) * (dist == null ? 26 : dist)}px)`;
+  }
+  function lineUp(el, t, a, d) {                  // masked line reveal
+    const p = eo(seg(t, a, a + (d || 0.9)));
+    el.style.transform = `translateY(${(1 - p) * 110}%)`;
+  }
+  function kenburns(kb, t, a, b, from, to) {      // from/to: [scale, x%, y%]
+    const p = eio(seg(t, a, b));
+    const s = from[0] + (to[0] - from[0]) * p;
+    const x = from[1] + (to[1] - from[1]) * p;
+    const y = from[2] + (to[2] - from[2]) * p;
+    kb.style.transform = `translate(${x}%, ${y}%) scale(${s})`;
+  }
+  // Scenes dissolve: a scene fades in over [in - fin, in] on top of the previous one, which
+  // stays fully opaque underneath until then. Text (.tx) leaves just before the next scene.
+  function sceneVis(sc, t, fin, linger) {
+    const a = +sc.dataset.in, b = +sc.dataset.out;
+    fin = fin || 0; linger = linger || 0;
+    const vis = t >= a - fin - 1e-6 && t < b + linger;
+    sc.style.visibility = vis ? "visible" : "hidden";
+    if (!vis) { sc.style.opacity = 0; return false; }
+    const o = Math.min(fin ? eio(seg(t, a - fin, a)) : 1, linger ? 1 - seg(t, b, b + linger) : 1);
+    sc.style.opacity = o;
+    const txo = 1 - seg(t, b - 1.0, b - 0.3);
+    sc.querySelectorAll(":scope > .tx, .panel .tx").forEach((el) => { el.style.opacity = txo; });
+    return true;
+  }
+
+  const sc = Object.fromEntries([...document.querySelectorAll(".scene")].map((s) => [s.id, s]));
+
+  window.renderFrame = function (t) {
+    // global fade in / out
+    $("fade").style.opacity = Math.max(1 - seg(t, 0, 1.2), seg(t, DUR - 2.0, DUR - 0.2));
+
+    // V1 --------------------------------------------------------------
+    if (sceneVis(sc.v1, t, 0)) {
+      kenburns(sc.v1.querySelector(".kb"), t, 0, 7, [1.14, -1.5, 0], [1.02, 0.5, 0]);
+      fadeUp($("v1k"), t, 0.8, 1.0, 14);
+      $("v1k").style.letterSpacing = (0.55 - 0.25 * eo(seg(t, 0.8, 2.2))) + "em";
+      lineUp($("v1l1"), t, 1.3); lineUp($("v1l2"), t, 1.65);
+      fadeUp($("v1en"), t, 2.7, 1.0); fadeUp($("v1b"), t, 3.4, 1.0, 10);
+    }
+    // V2 --------------------------------------------------------------
+    if (sceneVis(sc.v2, t, 0.9)) {
+      kenburns(sc.v2.querySelector(".kb"), t, 5.1, 12.2, [1.02, 1.5, 0], [1.12, -1.0, -1]);
+      fadeUp($("v2a"), t, 6.2, 0.8); lineUp($("v2l1"), t, 6.6); lineUp($("v2l2"), t, 6.95);
+      fadeUp($("v2p1"), t, 8.1, 0.7, 18); fadeUp($("v2p2"), t, 8.45, 0.7, 18); fadeUp($("v2p3"), t, 8.8, 0.7, 18);
+    }
+    // V3 --------------------------------------------------------------
+    if (sceneVis(sc.v3, t, 0.9)) {
+      kenburns(sc.v3.querySelector(".kb"), t, 11.1, 18.2, [1.05, -2, 0], [1.14, 2, 0]);
+      fadeUp($("v3a"), t, 12.2, 0.8); lineUp($("v3l1"), t, 12.8, 1.0);
+      for (let i = 1; i <= 5; i++) fadeUp($("v3c" + i), t, 14.2 + i * 0.22, 0.7, 18);
+    }
+    // V4 floors (linger: fades out under the V5 panel wipe) ----------------
+    if (sceneVis(sc.v4, t, 0.9, 2.0)) {
+      const floors = [["f3", 18], ["f4", 24], ["f5", 30], ["f6", 36]];
+      let cur = 3;
+      floors.forEach(([id, a], i) => {
+        const el = $(id), next = i < floors.length - 1 ? floors[i + 1][1] : Infinity;
+        const vis = (i === 0 || t >= a - 0.9) && t < next;
+        el.style.visibility = vis ? "visible" : "hidden";
+        el.style.opacity = i === 0 ? 1 : eio(seg(t, a - 0.9, a));
+        if (vis) {
+          const dur = (next === Infinity ? 44 : next) - a;
+          kenburns(el.querySelector(".kb"), t, a - 0.9, a + dur, i % 2 ? [1.03, 1.5, 0] : [1.13, -1.5, 0], i % 2 ? [1.13, -1.5, -0.5] : [1.03, 1.5, 0.5]);
+          const info = el.querySelector(".info");
+          const leave = next === Infinity ? 42 : next;
+          info.style.opacity = 1 - seg(t, leave - 1.0, leave - 0.3);
+          fadeUp(info.querySelector(".no"), t, a + 0.1, 0.9, 30);
+          fadeUp(info.querySelector(".name"), t, a + 0.35, 0.9, 24);
+          fadeUp(info.querySelector(".sub"), t, a + 0.6, 0.9, 18);
+          info.querySelectorAll(".feats .pill").forEach((pl, k) => fadeUp(pl, t, a + 1.0 + k * 0.18, 0.7, 14));
+        }
+        if (t >= a - 0.45) cur = +id.slice(1);
+      });
+      fadeUp($("rail"), t, 18.3, 1.0, 0);
+      $("rail").querySelectorAll("div").forEach((d) => d.classList.toggle("on", +d.dataset.f === cur));
+    }
+    // V5 locations: panels wipe up over the fading floors ---------------------
+    if (sceneVis(sc.v5, t, 0)) {
+      ["p1", "p2", "p3"].forEach((id, i) => {
+        const p = eo(seg(t, 42.0 + i * 0.35, 43.4 + i * 0.35));
+        $(id).style.clipPath = `inset(${(1 - p) * 100}% 0 0 0)`;
+        kenburns($(id).querySelector(".kb"), t, 41.8, 51.5, [1.18, 0, 2], [1.04, 0, -1]);
+        fadeUp($("c" + (i + 1)), t, 43.5 + i * 0.3, 0.9, 24);
+      });
+      const tp = seg(t, 42.4, 43.6);
+      $("v5top").style.opacity = tp;
+      sc.v5.querySelectorAll(".sep").forEach((e) => { e.style.opacity = seg(t, 43.0, 44.2); });
+      fadeUp($("v5t"), t, 44.4, 1.0, 16);
+    }
+    // V6 stairs ---------------------------------------------------------------
+    if (sceneVis(sc.v6, t, 0.9)) {
+      kenburns(sc.v6.querySelector(".kb"), t, 50.1, 60.2, [1.05, 0, 0], [1.15, -2, 0]);
+      fadeUp($("v6k"), t, 51.1, 0.8); lineUp($("v6l1"), t, 51.4, 1.0);
+      Charts.stairs($("vc-stairs"), { w: 1000, h: 560, progress: seg(t, 52.3, 55.9) });
+      fadeUp($("v6n"), t, 56.1, 1.0, 20);
+    }
+    // V7 numbers ----------------------------------------------------------------
+    if (sceneVis(sc.v7, t, 0.9)) {
+      const pa = 1 - seg(t, 65.5, 66.2), pb = seg(t, 65.9, 66.6);
+      $("v7a").style.opacity = pa; $("v7a").style.visibility = pa > 0.001 ? "visible" : "hidden";
+      $("v7b").style.opacity = pb; $("v7b").style.visibility = pb > 0.001 ? "visible" : "hidden";
+      if (pa > 0.001) {
+        fadeUp($("v7k1"), t, 60.1, 0.8); lineUp($("v7l1"), t, 60.4, 1.0);
+        fadeUp($("v7lg"), t, 60.9, 0.8, 10);
+        Charts.revenue($("vc-revenue"), { w: 1180, h: 520, progress: seg(t, 61.1, 64.1) });
+        fadeUp($("v7bep"), t, 63.5, 0.9, 16);
+      }
+      if (pb > 0.001) {
+        fadeUp($("v7k2"), t, 66.2, 0.8); lineUp($("v7l2"), t, 66.4, 1.0);
+        Charts.roadmap($("vc-roadmap"), { w: 700, h: 560, progress: seg(t, 66.9, 69.4) });
+        for (let i = 1; i <= 4; i++) fadeUp($("v7t" + i), t, 67.2 + i * 0.28, 0.8, 18);
+      }
+    }
+    // V8 closing -------------------------------------------------------------------
+    if (sceneVis(sc.v8, t, 0.9)) {
+      kenburns(sc.v8.querySelector(".kb"), t, 71.1, 84, [1.03, 0, 0], [1.16, -1.5, -1]);
+      lineUp($("v8l1"), t, 72.5, 1.0); lineUp($("v8l2"), t, 73.0, 1.0);
+      document.querySelector("#v8 .c1").style.opacity = 1 - seg(t, 76.4, 77.2);
+      fadeUp($("v8en"), t, 77.4, 1.2, 18); fadeUp($("v8h"), t, 78.1, 1.1, 16); fadeUp($("v8co"), t, 79.0, 1.1, 10); fadeUp($("v8d"), t, 79.6, 1.0, 0);
+    }
+  };
+
+  (async () => {
+    await document.fonts.ready;
+    await Promise.all([...document.images].map((im) => im.complete ? 1 : new Promise((r) => { im.onload = im.onerror = r; })));
+    window.renderFrame(0);
+    document.body.dataset.ready = "1";
+  })();
+})();
+</script>
+</body>
+</html>

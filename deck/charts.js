@@ -219,5 +219,32 @@
     return svg;
   }
 
-  window.Charts = { revenue, priceLadder, barList, turns, roadmap, man, won, fmt, ease, clamp };
+
+  /* ---------------------------------------------------------------- price stairs (dark) */
+  function stairs(svg, o) {
+    o = Object.assign({ w: 820, h: 560, progress: 1 }, o);
+    prep(svg, o.w, o.h);
+    const steps = [
+      { p: "10만원", t: "진입", d: ["프라이빗", "스파 대실"] },
+      { p: "15만원", t: "대표", d: ["스파 +", "스킨케어"] },
+      { p: "19~25만원", t: "결합", d: ["+ 바디케어", "· 스킨케어"] },
+      { p: "29만원+", t: "VIP", d: ["프리미엄 커플", "· 6F 풀"] }
+    ];
+    const w = (o.w - 30) / 4, base = o.h - 20, hs = [0.30, 0.47, 0.64, 0.81].map((f) => f * (o.h - 20));
+    steps.forEach((st, i) => {
+      const p = stag(o.progress, i, 4, 0.55);
+      const x = 4 + i * w, hh = hs[i] * p, y = base - hh;
+      const hero = i === 1;
+      if (hh > 1) el("rect", { x, y, width: w - 10, height: hh, rx: 3, fill: hero ? "rgba(181,138,58,.20)" : `rgba(62,146,196,${0.10 + i * 0.05})`, stroke: hero ? "#B58A3A" : "rgba(62,146,196,.55)", "stroke-width": 1 }, svg);
+      const op = clamp(p * 1.6 - 0.6, 0, 1);
+      const g = el("g", { opacity: op }, svg);
+      text(g, x + 20, y + 46, st.p, "", { fill: "#F4EFE7", "font-size": st.p.length > 6 ? 27 : 31, "font-weight": 600 });
+      text(g, x + 20, y + 78, st.t, "", { fill: hero ? "#C9A66B" : "#9FC3DA", "font-size": 17, "font-weight": 700, "letter-spacing": "0.16em" });
+      st.d.forEach((line, k) => text(g, x + 20, y + 116 + k * 26, line, "", { fill: "#C3C9CE", "font-size": 18 }));
+    });
+    el("line", { x1: 0, x2: o.w - 30, y1: base, y2: base, stroke: "rgba(244,239,231,.3)" }, svg);
+    return svg;
+  }
+
+  window.Charts = { revenue, priceLadder, barList, turns, roadmap, stairs, man, won, fmt, ease, clamp };
 })();
